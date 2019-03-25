@@ -49,7 +49,7 @@
         </view>
       </view>
 
-      <view class="changeItem flex-item kcb-item" style="margin-left: 650rpx;margin-top:800rpx;font-size: 12pt;"
+      <view class="changeItem flex-item kcb-item" style="margin-left: 550rpx;margin-top:1085rpx;height:234rpx;font-size: 12pt;"
         bindtap="getTermCourse">
         <view class="{{termCourse?'':'week'}}">周</view>/
         <view class="{{termCourse?'week':''}}">期</view>
