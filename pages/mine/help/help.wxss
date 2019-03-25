@@ -1,0 +1,97 @@
+/* pages/mine/help/help.wxss */
+page{
+    background-color: #f7f7f7;
+}
+
+.ks-class-ctn{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: stretch;
+    padding:20rpx;
+}
+
+.ks-class-item {
+    display: flex;
+    flex-direction: column;
+    font-size: 11pt;
+    padding: 0 40rpx;
+    margin-bottom: 20rpx;
+    background-color: #fff;
+    border-radius: 3px;
+    color: #888;
+}
+.ks-hd {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 145rpx;
+}
+
+.ks-hd-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding-right: 30rpx;
+}
+
+/**列表展开时标题的颜色变化 **/
+.ks-hd-name {
+    font-size: 12pt;
+    line-height: 225%;
+    letter-spacing: 1px;
+    transition: color .15s ease-in-out;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.ks-item-show .ks-hd-name {
+    transition: color .15s ease-in-out;
+    color: #79d0a6;
+}
+.ks-hd-other {
+    font-size: 10pt;
+    line-height: 100%;
+    color: #aaa;
+}
+.ks-item-show .ks-hd-place {
+    display: none;
+}
+
+/**列表展开的icon旋转 **/
+.ks-item-icon{
+    flex-shrink: 0;
+    width: 30rpx;
+    height: 30rpx;
+    transition: transform .2s;
+    transform: rotate(0deg);
+}
+.ks-item-show .ks-item-icon{
+    transform: rotate(180deg);
+}
+
+.ks-detail {
+    display: none;
+    flex-direction: column;   
+    overflow: hidden;
+    padding: 0;
+}
+.ks-item-show .ks-detail {
+    display: flex;
+    padding: 5rpx 0 15rpx;
+}
+.ks-detail-item {
+    display: flex;
+    align-items: center;
+    padding: 25rpx 5rpx 20rpx;
+    border-top: 1px solid #eee;
+}
+.ks-detail-label {
+    color: #888;
+    margin-right:10rpx;
+}
+.ks-detail-content {
+    flex: 1;
+    padding:20rpx;
+    letter-spacing:2rpx;
+}

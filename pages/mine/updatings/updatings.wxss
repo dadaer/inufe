@@ -1,0 +1,63 @@
+/* pages/mine/updatings/updatings.wxss */
+/* pages/core/cet/cet.wxss */
+page {
+    background-color: #f7f7f7;
+}
+
+.container {
+    padding-top: 30rpx;
+    background-color: #f7f7f7;
+    height: 100vh;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;   
+}
+
+.main-card{
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-top: 1rpx solid #e5e5e5;
+    border-bottom: 1rpx solid #e5e5e5;
+    border-radius: 10rpx;
+    box-shadow: 5rpx 5rpx 15rpx #ccc;
+    margin: 0 30rpx ;
+    /* background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: bottom center; */
+    overflow: hidden;
+    padding: 20rpx;
+    margin-bottom:20rpx;
+  }
+
+.main-card-item{
+    margin-bottom:10rpx;
+    border-bottom: 1px dotted #e5e5e5;
+    padding: 10rpx;
+    display: flex;
+    justify-content: space-between;
+    color:#888;
+    
+}
+
+.main-card-item-text{
+    font-size: 16pt;
+}
+
+.content{
+    padding:0;
+}
+
+.main-card-item1{
+    padding: 10rpx 20rpx;
+    font-size: 12pt;
+    border-left: #d3d3d3 solid 8rpx;
+}
+
+.main-card-item-text2{
+    color: #d3d3d3;
+    font-size:11pt;
+}
+

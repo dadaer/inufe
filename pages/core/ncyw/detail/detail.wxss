@@ -1,0 +1,32 @@
+/* pages/core/ncyw/detail/detail.wxss */
+/* pages/core/jwgg/detail/detail.wxss */
+page{
+    background-color: #f7f7f7;
+}
+.container {
+    color: #888;
+    padding-left: 30rpx;
+    padding-right: 30rpx;
+    
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    font-size: 22pt;
+    padding: 20rpx;
+    padding-top: 80rpx;
+    color:red;
+}
+
+.para {
+    padding: 20rpx;
+}
+
+.para-item {
+    display: block;
+    margin-bottom: 10rpx;
+    text-indent: 80rpx;
+    line-height: 60rpx;
+    font-size: 12pt;
+}

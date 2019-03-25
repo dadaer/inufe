@@ -1,0 +1,64 @@
+<view class='container'>
+<view class='user-info-box'>
+<navigator url="/pages/mine/login" class="user-info" >
+      <view class="info-hd">
+        <!-- <image class="user-avatar" src="{{user.wx.avatarUrl}}"></image> -->
+        <open-data type="userAvatarUrl" class="user-avatar" ></open-data>
+        <view class="user-title">
+          <text class="user-name">{{userName}}</text>
+          <!-- <text class="user-id">未绑定</text> -->
+        </view>
+        <!-- <text class="bind-btn">切换绑定</text> -->
+        <!-- <view class="btn-open">
+          <image class="btn-enter" src="/images/mine/enter.png"></image>
+        </view> -->
+      </view>
+</navigator>
+</view>
+<view class="more-list">
+<navigator url="/pages/mine/help/help" class="link"> 
+    <view class="more-btn">
+      <image class="btn-icon" src="/images/mine/help.png"></image>
+      <text class="btn-text">使用帮助</text>
+      <view class="btn-open">
+        <image class="btn-enter" src="/images/mine/enter.png"></image>
+      </view>
+    </view>
+   </navigator> 
+  <navigator url="/pages/mine/feedback/feedback" class="link"> 
+    <view class="more-btn">
+      <image class="btn-icon" src="/images/mine/issue.png"></image>
+      <text class="btn-text">信息反馈</text>
+      <view class="btn-open">
+        <image class="btn-enter" src="/images/mine/enter.png"></image>
+      </view>
+    </view>
+   </navigator> 
+  <navigator url="/pages/mine/about/about" class="link">
+    <view class="more-btn">
+      <image class="btn-icon" src="/images/mine/about.png"></image>
+      <text class="btn-text">关于我们</text>
+      <view class="btn-open">
+        <image class="btn-enter" src="/images/mine/enter.png"></image>
+      </view>
+    </view>
+  </navigator>
+  
+   <navigator url="/pages/mine/updatings/updatings" class="link"> 
+    <view class="more-btn">
+      <image class="btn-icon" src="/images/mine/logs.png"></image>
+      <text class="btn-text">更新日志</text>
+      <view class="btn-open">
+        <image class="btn-enter" src="/images/mine/enter.png"></image>
+      </view>
+    </view>
+   </navigator> 
+</view>
+
+  <navigator url="../mine/login/login" class="login-btn" bindtap = "changeUser">
+    <text>切换绑定</text>
+    
+  </navigator>
+
+
+</view>

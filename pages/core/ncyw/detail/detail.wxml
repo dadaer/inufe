@@ -1,0 +1,15 @@
+<!--pages/core/ncyw/detail/detail.wxml-->
+<!--pages/core/jwgg/detail/detail.wxml-->
+<view class="container">
+    <view wx:if="{{data.title}}">
+        <text class="title">{{data.title}}</text>
+        <block wx:for="{{data.para}}" class="para">
+            <view class="para-item">
+                {{item}}
+            </view>
+        </block>
+    </view>
+    <view wx:else>
+        网络错误，请稍后重试
+    </view>
+</view>

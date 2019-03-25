@@ -1,0 +1,60 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/index/swiper/swiper1",
+    "pages/index/swiper/swiper2", 
+    "pages/index/swiper/swiper3",
+    "pages/index/share/share",
+    "pages/logs/logs",
+    "pages/campus/campus",
+    "pages/campus/liblogin/liblogin",
+    "pages/core/course/course",
+    "pages/core/grade/grade",
+    "pages/core/exam/exam",
+    "pages/core/classroom/classroom",
+    "pages/core/school-calendar/school-calendar",
+    "pages/core/jwgg/jwgg",
+    "pages/core/ncyw/ncyw",
+    "pages/core/cet/cet",
+    "pages/core/jwgg/detail/detail",
+    "pages/core/ncyw/detail/detail",
+    "pages/mine/mine",
+    "pages/mine/about/about",
+    "pages/mine/feedback/feedback",
+    "pages/mine/help/help",
+    "pages/mine/updatings/updatings",
+    "pages/mine/login/login"
+  ],
+  "window":{
+   "navigationBarBackgroundColor": "#79d0a6",
+    "navigationBarTitleText": "i南财",
+    "navigationBarTextStyle":"white",
+    "backgroundTextStyle": "dark",
+    "backgroundColor": "#72b4ee"
+    
+  },
+  "tabBar": {
+    "selectedColor":"#79d0a6",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": " 首页",
+      "iconPath":"images/index/index.png",
+      "selectedIconPath":"images/index/index1.png"
+      
+    },
+    {
+      "pagePath": "pages/campus/campus",
+      "text": "图书馆",
+      "iconPath":"images/campus/campus.png",
+      "selectedIconPath":"images/campus/campus1.png"
+    },
+    {
+      "pagePath": "pages/mine/mine",
+      "text": "我的",
+      "iconPath":"images/mine/mine.png",
+      "selectedIconPath":"images/mine/mine1.png"
+    }
+    ]
+  }
+  
+}

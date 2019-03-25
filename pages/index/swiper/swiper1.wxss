@@ -1,0 +1,42 @@
+/* pages/index/swiper/swiper1.wxss
+page {
+  background-color: #f7f7f7;
+}
+
+.container {
+  padding: 30rpx;
+
+  height: 100vh;
+}
+
+.content {
+  border: 6px solid #79d0a6;
+  height: 100%;
+  margin-bottom: 40rpx;
+  border-radius: 8rpx;
+  padding-top: 30rpx;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  padding-top: 20rpx;
+  margin-bottom: 40rpx;
+}
+
+.header-image {
+  height: 180px;
+  width: 90%;
+  border-radius: 10rpx;
+}
+
+.text {
+  padding: 40rpx;
+  text-align: left;
+  text-indent: 2rem;
+  color: #777;
+  letter-spacing: 2rpx;
+  line-height: 1.6;
+  font-size: 15px;
+
+} */

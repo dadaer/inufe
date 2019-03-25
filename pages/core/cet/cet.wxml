@@ -1,0 +1,31 @@
+<view class="container">
+    <view class="cet-header">
+        <view class="cet-text">
+            <text class="cet-header-title">等级考试</text>
+            <!-- <text class="cj-header-info">学号：{{id}}</text>
+            <text class="cj-header-info">姓名：{{name}}</text> -->
+        </view>
+        <image class="cet-bg" src="/images/core/cet.jpg"></image>
+    </view>
+
+    <block class="card">
+        <view class="main-card" wx:for="{{cet}}" wx:if="{{item.year}}">
+            <view class="main-card-item">
+                <text class="main-card-item-text">学年</text>
+                <text class="main-card-item-text">{{item.year}}</text>
+            </view>
+            <view class="main-card-item">
+                <text class="main-card-item-text">学期</text>
+                <text class="main-card-item-text">{{item.term}}</text>
+            </view>
+            <view class="main-card-item">
+                <text class="main-card-item-text">等级考试名称</text>
+                <text class="main-card-item-text">{{item.name}}</text>
+            </view>
+            <view class="main-card-item">
+                <text class="main-card-item-text">成绩</text>
+                <text class="main-card-item-text">{{item.score}}</text>
+            </view>
+        </view>
+    </block>
+</view>

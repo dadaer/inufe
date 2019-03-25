@@ -1,0 +1,11 @@
+<!--pages/core/jwgg/detail/detail.wxml-->
+<view class="container">
+    <view wx:if="{{data.title}}">
+        <text class="title">{{data.title}}</text>
+        <block wx:for="{{data.para}}" class="para">
+            <view class="para-item">
+                {{item}}
+            </view>
+        </block>
+    </view>
+</view>

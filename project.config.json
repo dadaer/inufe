@@ -1,0 +1,159 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.4.0",
+	"appid": "wx00a7be6760c86984",
+	"projectname": "i%E5%8D%97%E8%B4%A2",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 18,
+			"list": [
+				{
+					"id": -1,
+					"name": "login",
+					"pathName": "pages/mine/login/login",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "mine",
+					"pathName": "pages/mine/mine",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "course",
+					"pathName": "pages/core/course/course",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "grade",
+					"pathName": "pages/core/grade/grade",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "exam",
+					"pathName": "pages/core/exam/exam",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "index",
+					"pathName": "pages/index/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "campus",
+					"pathName": "pages/campus/campus",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "classroom",
+					"pathName": "pages/core/classroom/classroom",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "jwgg",
+					"pathName": "pages/core/jwgg/jwgg",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "cet",
+					"pathName": "pages/core/cet/cet",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "detail",
+					"pathName": "pages/core/jwgg/detail/detail",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "help",
+					"pathName": "pages/mine/help/help",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "about",
+					"pathName": "pages/mine/about/about",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "feedback",
+					"pathName": "pages/mine/feedback/feedback",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "liblogin",
+					"pathName": "pages/campus/liblogin/liblogin",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "share",
+					"pathName": "pages/index/share/share",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "updatings",
+					"pathName": "pages/mine/updatings/updatings",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "s1",
+					"pathName": "pages/index/swiper/swiper1",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "ncyw",
+					"pathName": "pages/core/ncyw/ncyw",
+					"scene": null
+				}
+			]
+		}
+	}
+}

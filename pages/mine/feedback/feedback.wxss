@@ -1,0 +1,53 @@
+/* pages/mine/feedback/feedback.wxss */
+page{
+    height:100vh;
+    background-color:#f7f7f7;
+    
+}
+.container {
+    
+    padding: 20px;
+}
+
+.content {
+    border: 5px solid #79d0a6;
+    border-radius: 8px;
+    padding: 40rpx;
+    /* margin: 20rpx; */
+    height: 1000rpx;
+    font-family: inherit;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+}
+
+.image {
+    display: inline-block;
+    margin: 0 auto;
+    width: 310px;
+}
+
+.text {
+    color: #888;
+}
+
+.title {
+    font-size: 17pt;
+    margin: 10px 0;
+    display:flex;
+    justify-content:center;
+}
+
+.para {
+    font-size: 11pt;
+    text-indent: 20px;
+    letter-spacing: 1px;
+}
+
+.number {
+    text-indent: 20px;
+    margin-bottom: 20rpx;
+    font-size:11pt
+}

@@ -1,0 +1,457 @@
+/* pages/campus/library/library.wxss */
+/* pages/campus/lib/lib.wxss */
+/* pages/campus/campus.wxss */
+
+/* .container{
+  background-color: #fff;
+  padding-bottom: 20rpx;
+}
+
+.filter{
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 160rpx;
+  white-space: nowrap;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,1)), color-stop(0.93, rgba(255,255,255,.93)), to(rgba(255,255,255,0)));
+}
+
+.filter-item{
+  width: 120rpx;
+  height: 120rpx;
+  margin:20rpx 10rpx;
+  
+  border-radius: 5rpx;
+  box-shadow: 1px 2px 3px #e5e5e5;
+  opacity: .66;
+}
+
+.filter-item.active{
+  opacity: 1;
+  transform: scale(1.08,1.08);
+  box-shadow: 1px 2px 3px #ddd;
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  padding: 160rpx 20rpx 0;
+}
+
+.list-item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 120rpx;
+  margin-bottom: 20rpx;
+  border-radius: 3px;
+  box-shadow: 1px 2px 3px #ddd;
+  padding: 0 30rpx;
+  color: #fff;
+}
+
+.list-item.news{
+  background-color:#cb96df;
+}
+.list-item.notice{
+  background-color: #b5d8ad;
+}
+.list-item.scholarship{
+  background-color: #8ebfe2;
+}
+.list-item.updatings{
+  background-color: #f4a4c4;
+}
+/* .list-item.new{
+  background-color: #7acfa6;
+} */
+/* .list-item-left{
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding-right: 10rpx;
+}
+.list-item-title{
+  font-size: 13pt;
+  line-height: 175%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 100%;
+  overflow: hidden;
+}
+.list-item-time{
+  font-size: 10pt;
+  line-height: 125%;
+  opacity: 0.6;
+}
+
+.list-item-icon{
+  flex: 0 0 50rpx;
+  height: 50rpx;
+  width: 50rpx;
+  border-left: 1px solid #fff;
+  padding-left: 25rpx;
+}  */
+
+
+
+
+
+/**tsg.wxss**/
+page {
+    background-color: #f7f7f7;
+}
+
+.container {
+    background-color: #f7f7f7;
+    height: 100%;
+}
+
+.user-tsg {
+    display: flex;
+    background: #fefefe;
+    border-bottom: 1rpx solid #eee;
+}
+
+.user-tsg-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 11pt;
+    line-height: 150%;
+    height: 150rpx;
+    padding: 20rpx;
+    border-right: 1rpx solid #eee;
+}
+
+.user-tsg-dbet {
+    border: none;
+}
+
+.user-tsg-hd {
+    color: #777;
+}
+
+.user-tsg-bd {
+    display: flex;
+    justify-content: center;
+}
+
+.user-tsg-value {
+    font-size: 28pt;
+    color: #7fb7d1;
+    font-weight: bold;
+    line-height: 150%;
+    padding: 0 20rpx 0 30rpx;
+}
+
+.user-tsg-text {
+    color: #999;
+    font-size: 10pt;
+    line-height: 200%;
+    align-self: flex-end;
+}
+
+.book-list {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 25rpx 30rpx;
+}
+
+.current-type {
+    color: #777;
+    font-size: 12pt;
+    line-height: 200%;
+    background-color: #79d0a6;
+    opacity: .3;
+    padding: 10px;
+    width: 25%;
+    border-radius: 3px;
+    margin-top: 20rpx;
+    display: flex;
+    justify-content: center;
+    color: black;
+}
+
+.current-type.active {
+    opacity: 1;
+    transform: scale(1.03, 1.03);
+    box-shadow: 1px 2px 3px #ddd;
+}
+
+.book-wraper {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    overflow: hidden;
+    padding: 35rpx 30rpx 10rpx;
+    margin-bottom: 20rpx;
+    background: #fff;
+    border-radius: 5px;
+    height: 160rpx;
+}
+
+.book-name {
+    line-height: 135%;
+    word-break: break-all;
+    color: #888;
+}
+
+.book-date {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-top: 25rpx;
+    font-size: 9pt;
+    color: #888;
+}
+
+.yhrq-value {
+    font-size: 13pt;
+}
+
+.book-img {
+    height: 13pt;
+    width: 13pt;
+    margin-top: 2pt;
+    margin-right: 10rpx;
+}
+
+
+
+
+.card-item-hd-jy {
+    display: flex;
+    /*align-items: center;*/
+    /*height: 75rpx;
+    width: 270rpx;*/
+    /*border-bottom: 5rpx solid #e5e5e5;*/
+    /*margin-left: 30rpx;*/
+    margin-top: 20rpx;
+    margin-left: 20rpx;
+    width: 165rpx;
+    height: 0;
+    /* border-right: 30rpx solid transparent; */
+    border-top: 30rpx solid #9d89ea;
+    border-left: 20rpx solid #9d89ea;
+    border-bottom: 30rpx solid #9d89ea;
+    border-radius: 10rpx;
+}
+
+.card-item-name-three {
+    letter-spacing: 11px;
+    font-size: 14px;
+    color: white;
+    padding-left: 10rpx;
+    margin-top: -20rpx;
+    font-weight: bold;
+    /*width: 280rpx;*/
+    /*height: 0;*/
+    /*border-right: 60rpx solid transparent;*/
+    /*border-top: 30rpx solid #79d0a6;*/
+    /*border-left: 30rpx solid #79d0a6;*/
+    /*border-bottom: 60rpx solid #79d0a6 ;*/
+}
+
+.card-info-right {
+    display: flex;
+    color: #acacac;
+    flex-direction: column;
+}
+
+/**借阅信息**/
+.main-card-item#tsg .card-item-bd {
+    padding-bottom: 85rpx;
+}
+
+.tsg-list {
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: space-around;
+    flex-direction: column;
+
+}
+
+.tsg-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20rpx 15rpx 15rpx;
+    border: 5px solid #79d0a6;
+    border-radius: 8px;
+    padding-top: 20rpx;
+}
+
+.tsg-book {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 400rpx;
+    height: 400rpx;
+    /*background-image: url('/images/index/tsg-book.png');*/
+    /*微信暂不支持静态bgimg文件，改用服务器url*/
+    /* background-image: url(''); */
+    background-size: 100% 100%;
+    padding: 50rpx 80rpx;
+    color: #888;
+    margin-bottom: 10rpx;
+}
+
+.tsg-pickup-time {
+    font-size: 26rpx;
+    word-wrap: break-word;
+    white-space: nowrap;
+}
+
+.tsg-pickup-time-text {
+    padding-left: 4rpx;
+}
+
+.tsg-book-name {
+    height: 186rpx;
+    width: 190rpx;
+    font-weight: bold;
+    word-wrap: break-word;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+
+.tsg-timing,
+tsg-return-time {
+    line-height: 200%;
+}
+
+.tsg-timing-value {
+    font-size: 13pt;
+    font-weight: bold;
+    color: #729fc3;
+    padding: 0 8rpx;
+}
+
+.tsg-timing-text {
+    font-size: 10pt;
+    color: #acacac;
+}
+
+.tsg-return-time-value {
+    font-size: 12pt;
+    color: #7f848a;
+}
+
+.tsg-return-time-text {
+    font-size: 10pt;
+    color: #acacac;
+    padding-left: 8rpx;
+}
+
+.filter {
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: space-around;
+    color: #888;
+
+}
+
+.login-text {
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+    font-size: 20pt;
+    color: #888;
+}
+
+.liblogin {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    background-color: #79d0a6;
+    width: 60%;
+    padding: 20rpx;
+    border-radius: 8rpx;
+    margin: 100rpx auto;
+    color: #f7f7f7;
+}
+
+.search_box {
+    display: flex;
+    justify-content: center;
+    margin: 300rpx 20rpx 0;
+    border: 1px solid #79d0a6;
+    border-radius: 8rpx;
+}
+
+.search_box_text {
+    background-color: #79d0a6;
+    width: 25%;
+    height: 100;
+    padding: 20rpx;
+    display: flex;
+    justify-content: center;
+}
+
+.search_box .active {
+    border: 5px solid #79d0a6;
+}
+
+.input {
+    width: 75%;
+    padding: 20rpx;
+}
+
+.book_card {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.book_main-card {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-top: 1rpx solid #e5e5e5;
+    border-bottom: 1rpx solid #e5e5e5;
+    border-radius: 10rpx;
+    box-shadow: 5rpx 5rpx 15rpx #ccc;
+    margin: 10rpx 30rpx 20rpx;
+    /* background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: bottom center; */
+    overflow: hidden;
+    padding: 20rpx;
+
+}
+
+.book_main-card-item {
+    margin-bottom: 10rpx;
+    border-bottom: 1px dotted #e5e5e5;
+    padding: 10rpx;
+    display: flex;
+    justify-content: space-between;
+    color: #888;
+}
+
+.book_main-card-item-text {
+    font-size: 11pt;
+}
+
+.research {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 24rpx;
+    color: #D3D3D3;
+    font-size: 16pt
+}
+
+.book_container {
+    padding-top: 20rpx;
+}
+

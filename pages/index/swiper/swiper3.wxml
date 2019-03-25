@@ -1,0 +1,8 @@
+<view class='container'>
+    <view class="content">
+      <view class='header'>
+        <image class='header-image' src='https://dadaer.top:8081/image?imgUrl=/home/iiii.jpg' 
+        style="width: 100%;" mode="widthFix"></image>
+      </view>
+    </view>
+</view>

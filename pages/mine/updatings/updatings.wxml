@@ -1,0 +1,86 @@
+<view class="container">
+    <block class="card">
+        <view class="main-card">
+            <view class="main-card-item">
+                <text class="main-card-item-text1">V1.0.0正式版</text>
+                <text style="font-size:12pt;color:#D3D3D3;">2019-03-24</text>
+            </view>
+            <view class="main-card-item1">
+                <text class="main-card-item-text2">后台解决终极BUG,择良日正式发布i南财小程序正式版</text>
+            </view>
+        </view>
+        <view class="main-card">
+            <view class="main-card-item">
+                <text class="main-card-item-text1">V0.2.0公测版</text>
+                <text style="font-size:12pt;color:#D3D3D3;">2019-03-21</text>
+            </view>
+            <view class="main-card-item1">
+                <text class="main-card-item-text2">修复:针对图书馆官网修改登录逻辑做出相应调整</text>
+            </view>
+            <view class="main-card-item1">
+                <text class="main-card-item-text2">优化:为解决后台不可捕捉的BUG,主登录页面需手动填写姓名</text>
+            </view>
+            <view class="main-card-item1">
+                <text class="main-card-item-text2">优化:主登录页面和图书馆登录页面实现手动刷新验证码和登录失败自动刷新验证码</text>
+            </view>
+        </view>
+        <view class="main-card">
+            <view class="main-card-item">
+                <text class="main-card-item-text1">V0.1.0公测版</text>
+                <text style="font-size:12pt;color:#D3D3D3;">2019-03-18</text>
+            </view>
+            <view class="main-card-item1">
+                <text class="main-card-item-text2">优化:课表实现当前周显示</text>
+            </view>
+            <view class="main-card-item1">
+                <text class="main-card-item-text2">优化:课表实现分周和学期显示,实现查看其他周次课表</text>
+            </view>
+        </view>
+        <view class="main-card">
+            <view class="main-card-item">
+                <text class="main-card-item-text1">V0.0.3内测版</text>
+                <text style="font-size:12pt;color:#D3D3D3;">2019-02-25</text>
+            </view>
+            <view class="main-card-item1">
+                <text class="main-card-item-text2">修复:历史借阅不断刷新BUG</text>
+            </view>
+            <view class="main-card-item1">
+                <text class="main-card-item-text2">修复:部分用户课表无法显示或信息错误BUG</text>
+            </view>
+            <view class="main-card-item1">
+                <text class="main-card-item-text2">优化:课表缓存逻辑</text>
+            </view>
+            <view class="main-card-item1">
+                <text class="main-card-item-text2">优化:轮播图内图片高度实现自适应</text>
+            </view>
+            <view class="main-card-item1">
+                <text class="main-card-item-text2">新增:当前借阅功能</text>
+            </view>
+            <view class="main-card-item1">
+                <text class="main-card-item-text2">新增:登录页面提示框</text>
+            </view>
+            <view class="main-card-item1">
+                <text class="main-card-item-text2">新增:课表查询页面点击单节课表可查看课程详细信息</text>
+            </view>
+        </view>
+        <view class="main-card">
+            <view class="main-card-item">
+                <text class="main-card-item-text1">V0.0.2内测版</text>
+                <text style="font-size:12pt;color:#D3D3D3;">2019-02-17</text>
+            </view>
+            <view class="main-card-item1">
+                <text class="main-card-item-text2">修复第一次内测时的若干bug</text>
+            </view>
+        </view>
+        <view class="main-card">
+            <view class="main-card-item">
+                <text class="main-card-item-text1">V0.0.1内测版</text>
+                <text style="font-size:12pt;color:#D3D3D3;">2019-02-03</text>
+            </view>
+            <view class="main-card-item1">
+                <text class="main-card-item-text2">开启内测</text>
+            </view>
+        </view>
+
+    </block>
+</view>

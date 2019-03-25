@@ -1,0 +1,31 @@
+<!--pages/core/classroom/classroom.wxml-->
+<!-- <text>pages/core/classroom/classroom.wxml</text> -->
+<view class="container">
+
+  <view class="classroom-header">
+    <view class="classroom-text">
+      <text class="classroom-header-title">空教室</text>
+      <text class="classroom-header-info">/*自动获取当前时间段</text>
+      <text class="classroom-header-info">空教室(仅供参考)*/</text>
+    </view>
+    <image class="classroom-bg" src="/images/core/classroom.jpg"></image>
+  </view>
+
+  <view class="content">
+    <!-- <view class="loader">
+      <image src="/images/index/loading.gif" wx-if="{{loading}}"></image>
+    </view> -->
+
+    <block wx:for="{{list}}">
+      <!-- <navigator url="/pages/campus/{{item.type}}/{{item.type}}_detail?type={{item.type}}&id={{item.articleid}}"> -->
+      <view wx:if="{{item}}" class="list-item ">
+        <view class="list-item-left">
+          <text class="list-item-title">{{item}}</text>
+          <!-- <text class="list-item-time">{{item.date}}</text> -->
+        </view>
+        <!-- <image class="list-item-icon" src="/images/campus/{{item.type}}.png"></image> -->
+      </view>
+      <!-- </navigator> -->
+    </block>
+  </view>
+</view>

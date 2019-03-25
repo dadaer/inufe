@@ -1,0 +1,25 @@
+<view class="ks-class-ctn">
+    <block >
+        <view wx:for="{{list}}" class="ks-class-item {{item.open ? 'ks-item-show' : ''}}">
+            <view class="ks-hd" data-id="{{index}}" bindtap="slideDetail">
+                <view class="ks-hd-left">
+                    <view class="ks-hd-name">
+                        <text class="ks-detail-label">Q:</text>
+                        <text>{{item.Q}}</text>
+                    </view>
+                    <!-- <view class="ks-hd-other">
+                        {{item.countdown}}<text class="ks-hd-place">{{item.place}}</text>
+                    </view> -->
+                </view>
+                <image class="ks-item-icon" src="/images/core/down.png"></image>
+            </view>
+            <view class="ks-detail">
+                <view class="ks-detail-item">
+                    <text class="ks-detail-label">A:</text>
+                    <text class="ks-detail-content">{{item.A}}</text>
+                </view>
+                
+            </view>
+        </view>
+    </block>
+</view> 

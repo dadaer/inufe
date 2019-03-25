@@ -1,0 +1,22 @@
+<!--pages/core/jwgg/jwgg.wxml-->
+<!--pages/core/classroom/classroom.wxml-->
+<!-- <text>pages/core/classroom/classroom.wxml</text> -->
+<view class="container">
+    <view class="content">
+        <!-- <view class="loader">
+          <image src="/images/index/loading.gif" wx-if="{{loading}}"></image>
+        </view> -->
+
+        <block wx:for="{{list}}">
+            <navigator url="../jwgg/detail/detail">
+            <view wx:if="{{item.title}}" class="list-item news"  bindtap="getNewsDetail">
+                <view class="list-item-left" >
+                    <text class="list-item-title" data-src="{{item.src}}">{{item.title}}</text>
+                    <text class="list-item-time">{{item.date}}</text>
+                </view>
+                <!-- <image class="list-item-icon" src="/images/campus/{{item.type}}.png"></image> -->
+            </view>
+            </navigator>
+        </block>
+    </view>
+</view>

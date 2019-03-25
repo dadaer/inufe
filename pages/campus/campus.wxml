@@ -1,0 +1,137 @@
+<!--pages/campus/library/library.wxml-->
+<!--pages/campus/lib/lib.wxml-->
+<!--news.wxml-->
+<view class="container">
+    <block wx:if="{{!lib_login}}">
+        <view class="login-text">请先绑定图书馆用户</view>
+        <view class="liblogin" bindtap="liblogin">
+            去绑定
+        </view>
+    </block>
+    <block wx:if="{{lib_login}}">
+        <view class="user-tsg">
+            <view class="user-tsg-item user-tsg-num">
+                <text class="user-tsg-hd">可借阅数</text>
+                <view class="user-tsg-bd">
+                    <text class="user-tsg-value">{{tsgData.books_num}}</text>
+                    <text class="user-tsg-text">本</text>
+                </view>
+            </view>
+            <view class="user-tsg-item user-tsg-history" bindtap="tsgHistory">
+                <text class="user-tsg-hd">可预约数</text>
+                <view class="user-tsg-bd">
+                    <text class="user-tsg-value">{{tsgData.books_appt}}</text>
+                    <text class="user-tsg-text">本</text>
+                </view>
+            </view>
+            <view class="user-tsg-item user-tsg-dbet">
+                <text class="user-tsg-hd">可委托数</text>
+                <view class="user-tsg-bd">
+                    <text class="user-tsg-value">{{tsgData.entrust}}</text>
+                    <text class="user-tsg-text">本</text>
+                </view>
+            </view>
+        </view>
+        <view class="main-card-item" id="tsg">
+            <!-- <navigator url="/pages/core/tsg/tsg"> -->
+            <view class="filter">
+                <text class="current-type {{active.type == 'current' ? 'active' : ''}}" data-type='current' bindtap="changeFilter">当前借阅</text>
+                <text class="current-type {{active.type == 'history' ? 'active' : ''}}" data-type="history" bindtap="changeFilter">历史借阅</text>
+                <text class="current-type {{active.type == 'search' ? 'active' : ''}}" data-type="search" bindtap="changeFilter">图书检索</text>
+            </view>
+            <block class="current" wx:if="{{active.type == 'current'}}">
+                <view class="tsg-list" wx:if="{{book_current_list}}">
+                    <view class="tsg-item" wx:for="{{book_current_list}}" >
+                        <view class="tsg-book" style="background-image: url('https://dadaer.top:8081/image?imgUrl=/home/book.png')">
+                            <view class="tsg-pickup-time">
+                                <text class="tsg-pickup-time-value">{{item.jyrq}}</text>
+                                <text class="tsg-pickup-time-text">借</text>
+                            </view>
+                            <text class="tsg-book-name">{{item.name}}</text>
+                        </view>
+                        <view class="tsg-return-time" style="margin-bottom:20rpx;">
+                            <text class="tsg-return-time-value">{{item.yhrq}}</text>
+                            <text class="tsg-return-time-text">应还</text>
+                        </view>
+                    </view>
+                </view>
+                <view wx:if="{{book_current_list.length == 0}}" style="padding:20rpx;">
+                    当前未借阅书籍
+                </view>
+                
+            </block>
+        </view>
+        <!-- </navigator> -->
+    </block>
+    <block class="history" wx:if="{{lib_login}}">
+        <view class="book-list" wx:if="{{active.type == 'history'}}">
+            <!-- <text wx:if="{{!message}}" class="current-type">历史借阅记录</text> -->
+            <view wx:if="{{book_history_list}}">
+                <block wx:for="{{book_history_list}}" wx:key="name">
+                    <view class="book-wraper" wx:if="{{item.name}}">
+                        <view class="book-name">
+                            <image class="book-img" src="/images/core/lib.jpg"></image>{{item.name}} <text style="font-size:11pt;display:inline-block;margin-left: 20rpx;">作者:{{item.author}}</text>
+                        </view>
+                        <view class="book-date">
+                            <view>
+                                <text>借阅日期：</text>
+                                <text>{{item.jyrq}}</text>
+                            </view>
+                            <view>
+                                <text>归还日期：</text>
+                                <text class="yhrq-value">{{item.ghrq}}</text>
+                            </view>
+                        </view>
+                    </view>
+                </block>
+            </view>
+            <view wx:if="{{book_history_list.length == 0}}">
+                天啦噜，你还没有借过任何书籍哟~
+            </view>
+        </view>
+    </block>
+    <block wx:if="{{lib_login}}">
+        <view wx:if="{{active.type == 'search'}}">
+            <view wx:if="{{showSearchBar}}">
+                <view class="search_box {{book_focus ? 'active' : ''}}">
+                    <input class="input" cursor-spacing="30" placeholder="输入书目名称" bindinput="bookInput" bindfocus="inputFocus"
+                        bindblur="inputBlur" />
+                    <text class="search_box_text" bindtap="submit">检索</text>
+                </view>
+            </view>
+            <view wx:if="{{!showSearchBar}}" class="book_container">
+                <view bindtap="research" class="research">
+                    重新检索
+                </view>
+                <block class="book_card" wx:for="{{book_details}}">
+                    <view wx:if="{{book_details.length == 0}}">
+                        无结果  
+                    </view>
+                    <view wx:else class="book_main-card">
+                        <view class="book_main-card-item">
+                            <text class="book_main-card-item-text">书名</text>
+                            <text class="book_main-card-item-text">{{item.bookName}}</text>
+                        </view>
+                        <view class="book_main-card-item">
+                            <text class="book_main-card-item-text">馆藏</text>
+                            <text class="book_main-card-item-text">{{item.gcfb}}</text>
+                        </view>
+                        <view class="book_main-card-item">
+                            <text class="book_main-card-item-text">可借</text>
+                            <text class="book_main-card-item-text">{{item.kjfb}}</text>
+                        </view>
+                        <view class="book_main-card-item">
+                            <text class="book_main-card-item-text">作者</text>
+                            <text class="book_main-card-item-text">{{item.author}}</text>
+                        </view>
+                        <view class="book_main-card-item">
+                            <text class="book_main-card-item-text">出版社</text>
+                            <text class="book_main-card-item-text">{{item.cbs}}</text>
+                        </view>
+                    </view>
+                </block>
+            </view>
+        </view>
+
+    </block>
+</view>

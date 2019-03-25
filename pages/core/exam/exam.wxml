@@ -1,0 +1,76 @@
+<!--ks.wxml-->
+<view class="container">
+    <!-- <view wx:if="{{remind}}" class="remind-box">
+        <image wx:if="{{remind == '加载中'}}" class="remind-img" src="/images/index/loading.gif"></image>
+        <block wx:else>
+          <image class="remind-img" src="/images/index/nothing.png"></image>
+          <text class="remind-text">{{remind}}</text>
+        </block>
+    </view> -->
+    <block>
+        <view class="ks-header">
+            <view class="ks-text">
+                <text class="ks-header-title">考试安排</text>
+                <text class="ks-header-info-ksName">{{ks.ksName}}</text>
+                <!-- <text class="ks-header-info" >学号：{{id}}</text> -->
+                <!-- <text class="ks-header-info" wx:else>教师号：{{id}}</text> -->
+                <!-- <text class="ks-header-info">姓名：{{name}}</text> -->
+            </view>
+            <image class="ks-bg" src="/images/core/exam.jpg"></image>
+        </view>
+
+        <view class="ks-class-ctn">
+            <block wx:for="{{list}}" wx:key="index">
+                <view wx:if="{{item.examName}}" class="ks-class-item {{item.open ? 'ks-item-show' : ''}}">
+                    <view class="ks-hd" data-id="{{index}}" bindtap="slideDetail">
+                        <view class="ks-hd-left">
+                            <view class="ks-hd-name">
+                                <text>【{{item.examName}}】</text>
+                            </view>
+                            <!-- <view class="ks-hd-other">
+                                {{item.countdown}}<text class="ks-hd-place">{{item.place}}</text>
+                            </view> -->
+                        </view>
+                        <image class="ks-item-icon" src="/images/core/down.png"></image>
+                    </view>
+                    <view class="ks-detail">
+                        <!-- <view class="ks-detail-item">
+                            <text class="ks-detail-label">类型</text>
+                            <text class="ks-detail-content">{{item.type}}</text>
+                        </view> -->
+                        <view class="ks-detail-item">
+                            <text class="ks-detail-label">日期</text>
+                            <text class="ks-detail-content">{{item.date}}</text>
+                        </view>
+                        <!-- <view class="ks-detail-item">
+                            <text class="ks-detail-label">时间</text>
+                            <text class="ks-detail-content">{{item.time}}</text>
+                        </view> -->
+                        <view class="ks-detail-item">
+                            <text class="ks-detail-label">地点</text>
+                            <text class="ks-detail-content">{{item.examPlace}}</text>
+                        </view>
+                        <view class="ks-detail-item" wx:if="{{!teacher}}">
+                            <text class="ks-detail-label">座位号</text>
+                            <text class="ks-detail-content">{{item.examNumber}}</text>
+                        </view>
+                        <!-- <block wx:else>
+                            <view class="ks-detail-item">
+                                <text class="ks-detail-label">主监考</text>
+                                <text class="ks-detail-content">{{item.main_supervisor}}</text>
+                            </view>
+                            <view class="ks-detail-item">
+                                <text class="ks-detail-label">副监考</text>
+                                <text class="ks-detail-content">{{item.supervisor?item.supervisor:'无'}}</text>
+                            </view>
+                        </block> -->
+                        <!-- <view class="ks-detail-item">
+                            <text class="ks-detail-label">任课教师</text>
+                            <text class="ks-detail-content">{{item.teacher?item.teacher:'无'}}</text>
+                        </view> -->
+                    </view>
+                </view>
+            </block>
+        </view>
+    </block>
+</view>

@@ -1,0 +1,161 @@
+<view class="container">
+  <!-- 轮播图 -->
+  <view class='swiper'>
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{imgUrls}}">
+        <swiper-item class="slide-image">
+          <navigator url='/pages/index/swiper/{{item.id}}'>
+            <image class="swiper-image" src="{{item.src}}" />
+          </navigator>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <!-- <view class="main-core"> -->
+  <!--功能滑块-->
+  <scroll-view scroll-x class="scroll-x">
+    <block wx:for="{{core}}" wx:key="id">
+      <navigator class="main-core-item" url="{{'/pages/core/'+item.id+'/'+item.id}}">
+        <image class="core-item-icon" src="/images/core/{{item.id}}.jpg"></image>
+        <text class="core-item-name">{{item.name}}</text>
+      </navigator>
+    </block>
+  </scroll-view>
+  <!-- </view> -->
+
+
+  <view class="main-card">
+    <!--今日课表-->
+    <view class="main-card-item" id="course" wx:if="{{card.course.show}}">
+      <navigator url="/pages/core/course/course">
+        <view class="card-item-hd-course-header">
+          <view class="card-item-hd-course">
+            <!-- <image class="card-item-icon" src="/images/core/kb.png"></image> -->
+            <text class="card-item-name-four">今日课表</text>
+          </view>
+          <view>
+            <text class="card-item-name-five">当前第{{currentWeek}}周</text>
+          </view>
+        </view>
+        <view wx:if="{{card.course.data.length == 0}}" class="card-item-bd kb-nothing">
+          <text style="color: #888;">今天没有课哦~</text>
+          <!-- <image class="kb-nothing-img" src="/images/index/jy-bg.png"></image>  -->
+        </view>
+        <view wx:else class="card-item-bd">
+          <view class="course-item" wx:for="{{card.course.data}}">
+            <view class="course-item-left">
+              <text class="course-item-what">{{item.courseName}}</text>
+              <text class="course-item-when">第{{item.courseStart}}-{{item.courseFinish}}节 | {{item.courseWeek}}</text>
+            </view>
+            <text class="course-item-where">{{item.courseArea}}</text>
+          </view>
+        </view>
+        <!-- <view class="course-open">
+          <text>查看完整课表</text>
+        </view> -->
+      </navigator>
+    </view>
+
+    <!--南财要闻-->
+    <view class="main-card-item" id="jwgg">
+      <navigator url="/pages/core/ncyw/ncyw">
+        <view class="card-item-hd-yw">
+          <!-- <image class="card-item-icon" src="/images/core/kb.png"></image> -->
+          <text class="card-item-name-four">南财要闻</text>
+        </view>
+        <view class="card-item-bd">
+          <view class="course-item" wx:for="{{card.yw.data}}">
+            <view class="course-item-left">
+              <text class="course-item-what">{{item.title}}</text>
+              <text class="course-item-when">{{item.date}}</text>
+            </view>
+          </view>
+        </view>
+        <view class="ncyw-open">
+          <text>更多</text>
+        </view>
+      </navigator>
+    </view>
+
+    <!--教务公告-->
+    <view class="main-card-item" id="jwgg">
+      <navigator url="/pages/core/jwgg/jwgg">
+        <view class="card-item-hd-jw">
+          <!-- <image class="card-item-icon" src="/images/core/kb.png"></image> -->
+          <text class="card-item-name-four">教务公告</text>
+        </view>
+        <view class="card-item-bd">
+          <view class="course-item" wx:for="{{card.jw.data}}">
+            <view class="course-item-left">
+              <text class="course-item-what">{{item.title}}</text>
+              <text class="course-item-when">{{item.date}}</text>
+            </view>
+          </view>
+        </view>
+        <view class="jwgg-open">
+          <text>更多</text>
+        </view>
+      </navigator>
+    </view>
+
+
+
+    <!--今日分享-->
+    <!-- <view class="main-card-item" id="fx">
+      <navigator url="/pages/index/share/share">
+        <view class="card-item-hd-fx">
+          <text class="card-item-name-four">今日分享</text>
+        </view>
+        <view class="card-item-bd">
+          <view class="fx-item" >
+            <view class="course-item-left">
+              <view>
+                  <image src="/images/title.jpg" class="fx-image"></image>
+              </view>
+              <text class="fx-item-title">{{card.fx.data.passgeTitle}}</text>
+            </view>
+          </view>
+        </view>
+      </navigator>
+    </view> -->
+
+    <!--校园卡-->
+    <!--<view class="main-card-item" id="campus-card">
+      <navigator url="/pages/core/campus-card/campus-card">
+        <view class="card-item-hd-xyk">
+           <image class="card-item-icon" src="/images/core/xyk.png"></image> 
+          <text class="card-item-name-three">校园卡</text>
+        </view>
+        <view class="card-item-bd">
+          <view class="card-info-hd">
+            <view class="card-info-left">
+              <text class="xyk-title">余额：</text>
+            </view>
+            <view class="card-info-right">
+              <view>截至时间：{{card.campusCard.data.lasttime}}</view>
+            </view>
+          </view>
+          <view class="xyk-balance">
+            <text class="xyk-balance-value">{{card.campusCard.data.balance}}</text>
+            <text class="xyk-balance-text">元</text>
+          </view>
+          <block>
+            <text class="xyk-title">今日消费：</text>
+            <view class="xyk-cost">
+              <block wx:for="{{card.xyk.data.today_cost.value}}" wx:key="*this">
+                <text class="xyk-cost-value">{{item}}</text>
+                <text class="xyk-cost-text" wx:if="{{ index != card.xyk.data.today_cost.value.length - 1}}">+</text>
+              </block>
+              <text class="xyk-cost-text">=</text>
+              <text class="xyk-cost-total">{{card.campusCard.data.today_cost.total}}</text>
+              <text class="xyk-cost-text">元</text>
+            </view>
+          </block>
+        </view>
+      </navigator>
+    </view>-->
+
+
+  </view>
+</view>

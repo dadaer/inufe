@@ -1,0 +1,2 @@
+<!--pages/index/share/share.wxml-->
+<text>{{data}}</text>
