@@ -1,4 +1,4 @@
-      var app = getApp();
+        var app = getApp();
 Page({
   data: {
     help_status: true,

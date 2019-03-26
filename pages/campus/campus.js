@@ -155,6 +155,9 @@ Page({
       // header: {}, // 设置请求的 header
       success: function(res){
         // success
+        if(!app.cache.cookie){
+        app.saveCache("cookie",res.data.extend.cookies)
+        }
       },
       fail: function() {
         // fail
@@ -229,6 +232,19 @@ Page({
     this.setData({
       showSearchBar: true
     })
+  },
+  
+  relogin:function(){
+      app.removeCache('lib_bind'),
+      app.removeCache('book_history'),
+      app.removeCache('book_current'),
+      app.removeCache('cookie')
+      // wx.navigateTo({
+      //   url: '/pages/campus/liblogin/liblogin',
+      // })
+      this.setData({
+        lib_login: false
+      })
   },
 
   getHistory: function () {

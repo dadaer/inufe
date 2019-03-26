@@ -455,3 +455,14 @@ tsg-return-time {
     padding-top: 20rpx;
 }
 
+.relogin{
+    position: absolute;
+    bottom: 30rpx;
+    right: 30rpx;
+    background-color: #79d0a6;
+    border-radius: 10rpx;
+    padding: 20rpx;
+    font-size: 10pt;
+    caret-color: #acacac;
+}
+

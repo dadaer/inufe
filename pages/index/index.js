@@ -4,10 +4,6 @@ Page({
   data: {
     imgUrls: [
       {
-        id: 'swiper3',
-        src: 'https://dadaer.top:8081/image?imgUrl=/home/swiper3.jpg'
-      },
-      {
         id: 'swiper1',
         src: 'https://dadaer.top:8081/image?imgUrl=/home/swiper1.jpg'
       },
@@ -15,12 +11,15 @@ Page({
         id: 'swiper2',
         src: 'https://dadaer.top:8081/image?imgUrl=/home/swiper2.jpg'
       },
-      
+      {
+        id: 'swiper3',
+        src: 'https://dadaer.top:8081/image?imgUrl=/home/swiper3.jpg'
+      } 
     ],
     indicatorDots: true,
     autoplay: true,
-    interval: 5000,
-    duration: 200,
+    interval: 3000,
+    duration: 100,
     core: [{
         id: 'course',
         name: '课表查询',
@@ -275,6 +274,22 @@ Page({
         success: function (res) {
           // success
           // console.log(res.data[0].courseDay);
+          if(res.code == 500) {
+            wx.showModal({
+              title: 'WARNING',
+              // showCancel: false,
+              content: '课表解析异常,请迅速将信息反馈给开发小伙伴哦',
+              confirmText: '确定',
+              showCancel:false,
+              success(res) {
+                if (res.confirm) {
+                  wx.navigateTo({
+                    url: '/pages/mine/feedback/feedback',
+                  })
+                } 
+              }
+            })
+          }
           var list = []
           length = res.data.length;
           app.saveCache("course",res.data);
