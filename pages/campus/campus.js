@@ -19,30 +19,6 @@ Page({
 
   onLoad: function (options) {
     var _this = this;
-    // var that = this;
-    // wx.request({
-    //   url: 'https://dadaer.top:8081/connectNumber',
-    //   data: {
-    //     "stuNum":app.cache.stuNum,
-    //     "password":app.cache.password
-    //   },
-    //   method: 'GET',
-    //   success: function (res) {
-    //     // success
-    //     console.log(res.data);
-    //     that.setData({
-    //       'tsgData.books_num': app.cache.zdkj,
-    //       'tsgData.books_appt': app.cache.zdyy,
-    //       'tsgData.entrust': app.cache.zdwt
-    //     })
-    //   },
-    //   fail: function () {
-
-    //   },
-    //   complete: function () {
-
-    //   }
-    // })
     console.log(app.cache.zdkj);
   },
 
@@ -70,12 +46,8 @@ Page({
     } else if (app.cache.password) {
       wx.request({
         url: 'https://dadaer.top:8081/lib/history',
-        // data: {
-        //   "stuNum": app.cache.stuNum,
-        //   "password": app.cache.password
-        // },
         header: {
-          'Cookie': 'JSESSIONID=' + app.cache.cookie
+          'Cookie': 'JSESSIONID=' + app.cache.libcookie
         },
         method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
         // header: {}, // 设置请求的 header
@@ -107,12 +79,8 @@ Page({
     } else if (app.cache.password) {
       wx.request({
         url: 'https://dadaer.top:8081/lib/current',
-        // data: {
-        //   "stuNum": app.cache.stuNum,
-        //   "password": app.cache.password
-        // },
         header: {
-          'Cookie': 'JSESSIONID=' + app.cache.cookie
+          'Cookie': 'JSESSIONID=' + app.cache.libcookie
         },
         method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
         // header: {}, // 设置请求的 header
@@ -155,9 +123,7 @@ Page({
       // header: {}, // 设置请求的 header
       success: function(res){
         // success
-        if(!app.cache.cookie){
-        app.saveCache("cookie",res.data.extend.cookies)
-        }
+        app.saveCache("libcookie",res.data.extend.cookies)
       },
       fail: function() {
         // fail
@@ -202,7 +168,7 @@ Page({
         search_book: this.data.search_book
       },
       header: {
-        'Cookie': 'JSESSIONID=' + app.cache.cookie
+        'Cookie': 'JSESSIONID=' + app.cache.libcookie
       },
       method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
       // header: {}, // 设置请求的 header
@@ -238,10 +204,7 @@ Page({
       app.removeCache('lib_bind'),
       app.removeCache('book_history'),
       app.removeCache('book_current'),
-      app.removeCache('cookie')
-      // wx.navigateTo({
-      //   url: '/pages/campus/liblogin/liblogin',
-      // })
+      app.removeCache('libcookie')
       this.setData({
         lib_login: false
       })
@@ -256,31 +219,8 @@ Page({
   },
 
   onPullDownRefresh: function () {
-    console.log("shuaxin");
-    var _this = this;
-    wx.request({
-      url: 'https://dadaer.top:8081/lib/history',
-      data: {
-        "stuNum": app.cache.stuNum,
-        "password": app.cache.password
-      },
-      // header: {
-      //   'Cookie': 'JSESSIONID=' + app.cache.sessionID
-      // },
-      method: 'GET',
-      success: function (res) {
-        _this.setData({
-            'book_history_list': res.data
-          }),
-          app.saveCache("book_history", res.data)
-      },
-      fail: function () {
+    
 
-      },
-      complete: function () {
-
-      }
-    })
   }
 
 })

@@ -464,5 +464,6 @@ tsg-return-time {
     padding: 20rpx;
     font-size: 10pt;
     caret-color: #acacac;
+    position:fixed;
 }
 

@@ -27,6 +27,36 @@ Page({
       success: function(res){
         // success
         console.log(res.data);  
+        if (res.code == 500){
+          wx.showModal({
+            title:'提示',
+            content:'网络异常,无法获取空教室信息',
+            confirmText: '确定',
+            showCancel:false
+          })
+      }else if (res.data.length == 0  || !res.data) {
+        wx.showModal({
+          title: '提示',
+          // showCancel: false,
+          content: '与服务器会话已过期或发生网络异常, 无法获取信息,若仍需获取,需重新登录,是否重新登录',
+          confirmText: '是',
+          cancelText: '否',
+          success(res) {
+            if (res.confirm) {
+              wx.clearStorage();
+              wx.request({
+                url: 'https://dadaer.top:8081/management/init',
+                success: function (res) {
+                  app.saveCache("cookie", res.data.extend.cookies)
+                }
+              })
+              wx.navigateTo({
+                url: '/pages/mine/login/login',
+              })
+            } 
+          }
+        })
+      }
         that.setData({
           list:res.data
         }),

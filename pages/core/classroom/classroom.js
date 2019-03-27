@@ -27,14 +27,14 @@ Page({
       success: function (res) {
         // success
         console.log(res.data);
-        if (res.code == 500){
-            wx.showModal({
-              title:'提示',
-              content:'网络异常,无法获取空教室信息',
-              confirmText: '确定',
-              showCancel:false
-            })
-        }else if (res.data.length == 0  || !res.data) {
+        if (res.code == 500) {
+          wx.showModal({
+            title: '提示',
+            content: '网络异常,无法获取空教室信息',
+            confirmText: '确定',
+            showCancel: false
+          })
+        } else if (res.data.length == 0 || !res.data) {
           wx.showModal({
             title: '提示',
             // showCancel: false,

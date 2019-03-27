@@ -1,6 +1,4 @@
-<!--pages/campus/library/library.wxml-->
-<!--pages/campus/lib/lib.wxml-->
-<!--news.wxml-->
+
 <view class="container">
     <block wx:if="{{!lib_login}}">
         <view class="login-text">请先绑定图书馆用户</view>

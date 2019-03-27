@@ -26,30 +26,7 @@ Page({
       that.setData({
         userName:app.cache.stuName
       })
-    }else{
-    wx.request({
-      url: 'https://dadaer.top:8081/management/info',
-      header:{
-        'Cookie':'JSESSIONID=' + app.cache.sessionID
-      },
-      method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
-      // header: {}, // 设置请求的 header
-      success: function(res){
-        // success
-        console.log(res.data);
-        that.setData({
-          userName:res.data
-        })
-        app.saveCache("userName",res.data)
-      },
-      fail: function() {
-        // fail
-      },
-      complete: function() {
-        // complete
-      }
-    })
-  }
+    }
 },
 
   changeUser:function(){

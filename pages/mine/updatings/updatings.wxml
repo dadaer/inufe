@@ -3,16 +3,19 @@
         <view class="main-card">
             <view class="main-card-item">
                 <text class="main-card-item-text1">V1.1.0正式版</text>
-                <text style="font-size:12pt;color:#D3D3D3;">2019-03-26</text>
+                <text style="font-size:12pt;color:#D3D3D3;">2019-03-27</text>
+            </view>
+            <view class="main-card-item1">
+                    <text class="main-card-item-text2">修复:长时间后图书馆无法绑定问题</text>
             </view>
             <view class="main-card-item1">
                 <text class="main-card-item-text2">修改:轮播图数量,'我的'页面部分图标</text>
             </view>
             <view class="main-card-item1">
-                <text class="main-card-item-text2">优化:轮播图显示时间,解决轮播图显示时间过久问题</text>
+                <text class="main-card-item-text2">优化:轮播图显示,解决轮播图显示时间过久问题</text>
             </view>
             <view class="main-card-item1">
-                <text class="main-card-item-text2">优化:课表异常提醒,空教室数据异常提醒</text>
+                <text class="main-card-item-text2">优化:课表解析异常提醒,数据获取异常提醒</text>
             </view>
             <view class="main-card-item1">
                 <text class="main-card-item-text2">优化:针对图书馆数据刷新需求新增重新登录按钮</text>

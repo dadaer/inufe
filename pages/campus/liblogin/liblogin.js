@@ -22,7 +22,7 @@ Page({
                 captcha: _this.data.checkCode
             },
             header: {
-                'Cookie': 'JSESSIONID=' + app.cache.cookie
+                'Cookie': 'JSESSIONID=' + app.cache.libcookie
             },
             success: function (res) {
                 if (res.data != null && res.data.zdkj) {
@@ -58,7 +58,7 @@ Page({
             url: 'https://dadaer.top:8081/lib/captcha',
             data: {},
             header: {
-                'Cookie': 'JSESSIONID=' + app.cache.cookie
+                'Cookie': 'JSESSIONID=' + app.cache.libcookie
             },
             method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
             // header: {}, // 设置请求的 header
