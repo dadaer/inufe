@@ -1,13 +1,13 @@
-<view class="container">    
+<view class="container">
     <view class="content">
-         <!-- <image class="image" src="/images/mine/teamlogo.jpg" >  </image> -->
-         <view class="text">
+        <!-- <image class="image" src="/images/mine/teamlogo.jpg" >  </image> -->
+        <view class="text">
             <view class="title">信息反馈</view>
-            <view class="para">小程序使用过程中遇到的任何问题请大方向我们反馈,如果你有新的意见或建议,也欢迎大方的告诉我们,小程序是我们的第一次尝试,一定还存在着很多不足，i南财的发展依靠开发团队和用户的互相配合,你的建议就是我们的动力,i南财,我们一起创造可能</view>
+            <view class="para"> "i南财"是iTeam团队的初试验,依然处于完善阶段."i南财"的成长依靠开发团队和用户的互相配合.在使用小程序的过程中,遇到任何问题都可以向我们反馈.欢迎和我们分享你关于"i南财"的想法,你的建议就是我们前进的动力,i南财,我们一起创造可能</view>
             <view class="title">反馈渠道</view>
-            <view class="number">公众号:i南财,直接编辑你要反馈的内容,点击发送,我们会在后台及时查看,方便请顺便附上你的联系方式，方便我们与你后续沟通</view>
+            <view class="number">公众号:i南财,直接编辑你要反馈的内容,点击发送,我们会在后台及时查看,请顺便附上你的联系方式,方便我们与你后续交流</view>
             <view class="number">官方QQ:2372591673,添加小iQQ,直接与我们沟通,成为小i好友还可以随时掌握i南财最新动态</view>
             <view class="number">i南财使用反馈交流群:309805218</view>
-         </view>
+        </view>
     </view>
 </view>

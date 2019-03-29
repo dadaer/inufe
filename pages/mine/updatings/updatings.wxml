@@ -90,7 +90,7 @@
                 <text style="font-size:12pt;color:#D3D3D3;">2019-02-17</text>
             </view>
             <view class="main-card-item1">
-                <text class="main-card-item-text2">修复第一次内测时的若干bug</text>
+                <text class="main-card-item-text2">修复第一次内测时的若干BUG</text>
             </view>
         </view>
         <view class="main-card">
