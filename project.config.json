@@ -36,7 +36,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 18,
+			"current": 20,
 			"list": [
 				{
 					"id": -1,
@@ -151,6 +151,20 @@
 					"id": -1,
 					"name": "ncyw",
 					"pathName": "pages/core/ncyw/ncyw",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "volunteers",
+					"pathName": "pages/core/volunteers/volunteers",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "detatil",
+					"pathName": "pages/core/volunteers/detail/detail",
 					"scene": null
 				}
 			]

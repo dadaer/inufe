@@ -13,6 +13,8 @@
     "pages/core/exam/exam",
     "pages/core/classroom/classroom",
     "pages/core/school-calendar/school-calendar",
+    "pages/core/volunteers/volunteers",
+    "pages/core/volunteers/detail/detail",
     "pages/core/jwgg/jwgg",
     "pages/core/ncyw/ncyw",
     "pages/core/cet/cet",

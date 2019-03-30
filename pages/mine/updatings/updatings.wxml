@@ -2,11 +2,23 @@
     <block class="card">
         <view class="main-card">
             <view class="main-card-item">
-                <text class="main-card-item-text1">V1.1.0正式版</text>
-                <text style="font-size:12pt;color:#D3D3D3;">2019-03-27</text>
+                <text class="main-card-item-text1">V1.2.0正式版</text>
+                <text style="font-size:12pt;color:#D3D3D3;">2019-04-07</text>
+            </view>
+            <view class="main-card-item1">
+                    <text class="main-card-item-text2">新增:志愿服务功能</text>
             </view>
             <view class="main-card-item1">
                     <text class="main-card-item-text2">修复:长时间后图书馆无法绑定问题</text>
+            </view>
+            <view class="main-card-item1">
+                <text class="main-card-item-text2">优化:部分页面语言表达不通顺问题</text>
+            </view>
+        </view> 
+        <view class="main-card">
+            <view class="main-card-item">
+                <text class="main-card-item-text1">V1.1.0正式版</text>
+                <text style="font-size:12pt;color:#D3D3D3;">2019-03-27</text>
             </view>
             <view class="main-card-item1">
                 <text class="main-card-item-text2">修改:轮播图数量,'我的'页面部分图标</text>
@@ -63,6 +75,15 @@
                 <text style="font-size:12pt;color:#D3D3D3;">2019-02-25</text>
             </view>
             <view class="main-card-item1">
+                <text class="main-card-item-text2">新增:当前借阅功能</text>
+            </view>
+            <view class="main-card-item1">
+                <text class="main-card-item-text2">新增:登录页面提示框</text>
+            </view>
+            <view class="main-card-item1">
+                <text class="main-card-item-text2">新增:课表查询页面点击单节课表可查看课程详细信息</text>
+            </view>
+            <view class="main-card-item1">
                 <text class="main-card-item-text2">修复:历史借阅不断刷新BUG</text>
             </view>
             <view class="main-card-item1">
@@ -73,15 +94,6 @@
             </view>
             <view class="main-card-item1">
                 <text class="main-card-item-text2">优化:轮播图内图片高度实现自适应</text>
-            </view>
-            <view class="main-card-item1">
-                <text class="main-card-item-text2">新增:当前借阅功能</text>
-            </view>
-            <view class="main-card-item1">
-                <text class="main-card-item-text2">新增:登录页面提示框</text>
-            </view>
-            <view class="main-card-item1">
-                <text class="main-card-item-text2">新增:课表查询页面点击单节课表可查看课程详细信息</text>
             </view>
         </view>
         <view class="main-card">

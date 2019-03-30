@@ -62,13 +62,13 @@ Page({
         teacher_disabled: false,
         offline_disabled: true
       },
-      // {
-      //   id: 'jwgg',
-      //   name: '教务公告',
-      //   disabled: false,
-      //   teacher_disabled: false,
-      //   offline_disabled: true
-      // },
+      {
+        id: 'volunteers',
+        name: '志愿服务',
+        disabled: false,
+        teacher_disabled: false,
+        offline_disabled: true
+      },
       // { id: 'campus-card', name: '校园卡', disabled: false, teacher_disabled: false, offline_disabled: true },
       // {
       //   id: 'lib',

@@ -1,0 +1,96 @@
+/* pages/core/volunteers/volunteers.wxss */
+/* pages/core/cet/cet.wxss */
+page {
+    background-color: #f7f7f7;
+}
+
+.container {
+    padding-left: 30rpx;
+    padding-right: 30rpx;
+    background-color: #f7f7f7;
+    height: 100vh;
+}
+
+.cet-header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50rpx 0;
+}
+
+.cet-text {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    padding-left: 25rpx;
+}
+
+.cet-header-title {
+    font-size: 20pt;
+    font-weight: bold;
+    line-height: 150%;
+    margin-bottom: 15rpx;
+    color: #222;
+}
+
+.cet-header-info {
+    font-size: 11pt;
+    line-height: 160%;
+    color: #888;
+}
+
+.cet-bg {
+    display: block;
+    width: 200rpx;
+    height: 200rpx;
+    padding-right: 5rpx;
+    opacity: .3;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.main-card{
+    display: flex;
+    flex-direction: column;
+    /* background: #fff; */
+    border-top: 1rpx solid #e5e5e5;
+    border-bottom: 1rpx solid #e5e5e5;
+    border-radius: 10rpx;
+    box-shadow: 5rpx 5rpx 15rpx #ccc;
+    margin: 0 30rpx 20rpx;
+    /* background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: bottom center; */
+    overflow: hidden;
+    padding: 20rpx;
+    background-color: #f86d4e;
+  }
+
+.main-card-item{
+    margin-bottom:10rpx;
+    /* border-bottom: 1px dotted #e5e5e5; */
+    padding: 10rpx;
+    display: flex;
+    justify-content: space-between;
+    color:#ccc;
+}
+
+.main-card-item-text{
+    font-size: 11pt;
+    color:#fff;
+}
+
+.book-date {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-top: 25rpx;
+    font-size: 9pt;
+    color: #ddd;
+}
+

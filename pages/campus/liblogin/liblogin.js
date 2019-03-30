@@ -66,7 +66,7 @@ Page({
                 // success
                 setTimeout(function(){
                     wx.getImageInfo({
-                        src: 'https://dadaer.top:8081/image?imgUrl=/home/captcha/' + app.cache.cookie.substring(0,12) + 'captcha.png',
+                        src: 'https://dadaer.top:8081/image?imgUrl=/home/captcha/' + app.cache.libcookie.substring(0,12) + 'captcha.png',
                         success: function (res) {
                             // success
                             console.log(res.path)
