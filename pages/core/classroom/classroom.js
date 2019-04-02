@@ -65,7 +65,7 @@ Page({
           list: res.data
         })
         wx.showToast();
-        app.saveCache('classroom', res.data);
+        // app.saveCache('classroom', res.data);
       },
       fail: function () {
         // fail

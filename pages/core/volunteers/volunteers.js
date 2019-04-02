@@ -1,21 +1,12 @@
 // pages/core/volunteers/volunteers.js
+var app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-      zy:[
-        {
-          title:'玄武区特殊教育学校志愿活动',
-          jzrq:'4月5日',
-          hdrq:'4月7日下午'
-        },{
-          title:'锁金一小附属幼儿园志愿活动',
-          jzrq:'4月5日17:00',
-          hdrq:'4月7日14:00-17:00'
-        }
-      ]
+    list:[]
   },
 
   /**
@@ -36,41 +27,30 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    var that = this;
+    wx.request({
+      url: 'http://localhost:8081/volunteers',
+      data: {},
+      method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+      // header: {}, // 设置请求的 header
+      success: function(res){
+        // success
+        console.log(res.data);
+        that.setData({
+          list:res.data
+        })
+      },
+      fail: function() {
+        // fail
+      },
+      complete: function() {
+        // complete
+      }
+    })
   },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  getDetail:function(e) {
+    console.log(e.target.dataset.id)
+    app.saveCache("volunteerId",e.target.dataset.id);
   }
 })

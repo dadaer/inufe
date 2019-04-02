@@ -274,10 +274,9 @@ Page({
         success: function (res) {
           // success
           // console.log(res.data[0].courseDay);
-          if(res.code == 500) {
+          if(res.statusCode == 500) {
             wx.showModal({
               title: 'WARNING',
-              // showCancel: false,
               content: '课表解析异常,请迅速将信息反馈给开发小伙伴哦',
               confirmText: '确定',
               showCancel:false,

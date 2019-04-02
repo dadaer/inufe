@@ -9,7 +9,7 @@
             </view>
         </block>
     </view>
-    <view wx:else>
-        网络错误，请稍后重试
-    </view>
+    <!-- <view wx:else>
+        操作错误,请返回点击新闻标题文字处
+    </view> -->
 </view>

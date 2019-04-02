@@ -1,4 +1,4 @@
-        var app = getApp();
+                var app = getApp();
 Page({
   data: {
     help_status: true,
@@ -96,7 +96,7 @@ Page({
               // complete
             }
           })
-        },500) 
+        },100) 
       },
       fail: function() {
         // fail

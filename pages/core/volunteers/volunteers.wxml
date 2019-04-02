@@ -8,24 +8,25 @@
         <image class="cet-bg" src="/images/core/volunteers.jpg"></image>
     </view>
 
-    <block class="card" wx:for="{{zy}}">
-            <navigator url="../volunteers/detail/detail" class="main-card">
-                <view class="main-card-item">
-                    <view class="main-card-item-text" style="font-size:32rpx;">{{item.title}}</view>
-                    <view>
-                        <image src="/images/core/right.png" style="height:32rpx;width:32rpx"></image>
-                    </view>
+    <block class="card" wx:for="{{list}}" >
+        <navigator url="../volunteers/detail/detail" class="main-card" >
+            <view class="main-card-item" >
+                <view class="main-card-item-text" style="font-size:32rpx;"  
+                data-id="{{item.id}}" bindtap="getDetail">{{item.title}}</view>
+                <view>
+                    <image src="/images/core/right.png" style="height:32rpx;width:32rpx"></image>
                 </view>
-                <view class="book-date">
-                    <view>
-                        <text>报名截止时间:</text>
-                        <text>{{item.jzrq}}</text>
-                    </view>
-                    <view>
-                        <text>活动时间:</text>
-                        <text class="yhrq-value">{{item.hdrq}}</text>
-                    </view>
+            </view>
+            <view class="book-date">
+                <view>
+                    <text>报名截止时间:</text>
+                    <text>{{item.jzsj}}</text>
                 </view>
-            </navigator>
+                <view>
+                    <text>活动时间:</text>
+                    <text class="yhrq-value">{{item.hdsj}}</text>
+                </view>
+            </view>
+        </navigator>
     </block>
 </view>

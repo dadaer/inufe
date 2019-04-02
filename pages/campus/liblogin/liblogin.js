@@ -81,7 +81,7 @@ Page({
                             // complete
                         }
                     })
-                },500)
+                },100)
             },
             fail: function() {
                 // fail

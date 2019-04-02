@@ -3,8 +3,8 @@ Page({
   data: {
     user: {},
   },
-  
-  onLoad: function(){
+
+  onLoad: function () {
     // this.getData();
   },
   // getData: function(){
@@ -20,34 +20,44 @@ Page({
   //     'is_bind': !!app._user.is_bind
   //   });
   // }
-  onShow:function(){
+  onShow: function () {
     var that = this;
-    if(app.cache.stuName){
+    if (app.cache.stuName) {
       that.setData({
-        userName:app.cache.stuName
+        userName: app.cache.stuName
       })
     }
-},
+  },
 
-  changeUser:function(){
-    wx.clearStorage();
-    wx.request({
-      url: 'https://dadaer.top:8081/management/init',
-      data: {},
-      method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
-      // header: {}, // 设置请求的 header
-      success: function(res){
-        // success
-        console.log(res.data);
-        app.saveCache("cookie",res.data.extend.cookies)
-      },
-      fail: function() {
-        // fail
-      },
-      complete: function() {
-        // complete
-      }
-    })
+  changeUser: function () {
+    // wx.clearStorage();
+      app.removeCache('lib_bind'),
+      app.removeCache('book_history'),
+      app.removeCache('book_current'),
+      app.removeCache('libcookie'),
+      app.removeCache('stuNum'),
+      app.removeCache('cookie'),
+      app.removeCache('stuName'),
+      app.removeCache('course'),
+      app.removeCache('grade'),
+      app.removeCache('exam'),
+      app.removeCache('cet'),
+      wx.request({
+        url: 'https://dadaer.top:8081/management/init',
+        data: {},
+        method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+        // header: {}, // 设置请求的 header
+        success: function (res) {
+          // success
+          console.log(res.data);
+          app.saveCache("cookie", res.data.extend.cookies)
+        },
+        fail: function () {
+          // fail
+        },
+        complete: function () {
+          // complete
+        }
+      })
   }
 });
-

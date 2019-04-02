@@ -111,5 +111,5 @@ page {
 
 .main-card-item-text {
     font-size: 11pt;
-    margin-right: 20rpx;
+    
 }
