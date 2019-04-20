@@ -36,7 +36,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 20,
+			"current": 23,
 			"list": [
 				{
 					"id": -1,
@@ -165,6 +165,27 @@
 					"id": -1,
 					"name": "detatil",
 					"pathName": "pages/core/volunteers/detail/detail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "lost&found",
+					"pathName": "pages/core/lost&found/lost&found",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "lost&found detail",
+					"pathName": "pages/core/lost&found/detail/detail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "lost&found post",
+					"pathName": "pages/core/lost&found/post/post",
 					"scene": null
 				}
 			]

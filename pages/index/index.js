@@ -62,13 +62,13 @@ Page({
         teacher_disabled: false,
         offline_disabled: true
       },
-      {
-        id: 'volunteers',
-        name: '志愿服务',
-        disabled: false,
-        teacher_disabled: false,
-        offline_disabled: true
-      },
+      // {
+      //   id: 'volunteers',
+      //   name: '志愿服务',
+      //   disabled: false,
+      //   teacher_disabled: false,
+      //   offline_disabled: true
+      // },
       // { id: 'campus-card', name: '校园卡', disabled: false, teacher_disabled: false, offline_disabled: true },
       // {
       //   id: 'lib',
@@ -233,8 +233,8 @@ Page({
     var that = this;
     var length = 0;
     var mydate = util.formatTime(new Date());
-    var today = util.getDates(1, mydate)[0].week;
-    var todayWeek = util.todayInfo("2019/2/25").week;
+    var today = util.getDates(1, mydate)[0].week;//获取当前周几
+    var todayWeek = util.todayInfo("2019/2/25").week;//获取第几周
     that.setData({
       "currentWeek":todayWeek
     })
@@ -289,13 +289,13 @@ Page({
               }
             })
           }
-          var list = []
+          var list = [];
           length = res.data.length;
           app.saveCache("course",res.data);
           for (var i = 0; i < length; i++) {
             if (res.data[i] != null) {
               if (res.data[i].courseDay == today
-                && courseData[i].weeks.indexOf(todayWeek) >= 0 ) {
+                && res.data[i].weeks.indexOf(todayWeek) >= 0 ) {
                 list.push({
                   courseName: res.data[i].courseName,
                   courseStart: res.data[i].courseStart,

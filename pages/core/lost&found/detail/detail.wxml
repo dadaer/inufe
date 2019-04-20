@@ -1,0 +1,34 @@
+<view class="container">
+    <view class="cj-info-ctn">
+        <view class="cj-grade">
+            <image class="cj-grade-logo" src="/images/core/volunteers.jpg"></image>
+            <view class="cj-grade-term">
+                <view class="cj-grade-fst">
+                    <text style="display:block;margin:0 auto;">{{detail.title}}</text>
+                </view>
+            </view>
+        </view>
+        <view class="main-card">
+            <view class="main-card-item">
+                <text class="main-card-item-text">丢失时间</text>
+                <text class="main-card-item-text">{{detail.time}}</text>
+            </view>
+            <view class="main-card-item">
+                <text class="main-card-item-text">丢失地点</text>
+                <text class="main-card-item-text">{{detail.place}}</text>
+            </view>
+            <view class="main-card-item">
+                <text class="main-card-item-text">联系方式</text>
+                <text class="main-card-item-text">{{detail.contactInfo}}</text>
+            </view>
+            <view class="main-card-item">
+                <text class="main-card-item-text" style="margin-right: 20rpx;">详细描述</text>
+                <text class="main-card-item-text">{{detail.content}}</text>
+            </view>
+            <view class="main-card-item img">
+                <text class="main-card-item-text">图片信息</text>
+                <image src="/images/core/lost.jpg" style="width:99%;height:400rpx;margin-top:20rpx;border-radius:8rpx;"></image>
+            </view>
+        </view>
+    </view>
+</view>

@@ -65,7 +65,6 @@
 }
 
 .hd {
-
     top: 0;
     left: 50%;
     width: 1000rpx;

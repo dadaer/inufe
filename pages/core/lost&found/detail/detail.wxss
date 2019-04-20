@@ -1,17 +1,15 @@
-/* pages/core/volunteers/volunteers.wxss */
-/* pages/core/cet/cet.wxss */
 page {
     background-color: #f7f7f7;
 }
 
 .container {
-    padding-left: 30rpx;
-    padding-right: 30rpx;
+    padding-left: 20rpx;
+    padding-right: 20rpx;
     background-color: #f7f7f7;
     height: 100vh;
 }
 
-.cet-header {
+.cj-header {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -19,14 +17,14 @@ page {
     padding: 50rpx 0;
 }
 
-.cet-text {
+.cj-text {
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
     padding-left: 25rpx;
 }
 
-.cet-header-title {
+.cj-header-title {
     font-size: 20pt;
     font-weight: bold;
     line-height: 150%;
@@ -34,13 +32,13 @@ page {
     color: #222;
 }
 
-.cet-header-info {
+.cj-header-info {
     font-size: 11pt;
     line-height: 160%;
     color: #888;
 }
 
-.cet-bg {
+.cj-bg {
     display: block;
     width: 200rpx;
     height: 200rpx;
@@ -48,15 +46,47 @@ page {
     opacity: .3;
 }
 
-.card{
+.cj-info-ctn {
     display: flex;
-    flex-direction: column; 
+    flex-flow: column nowrap;
+    align-items: stretch;
+    border-radius: 3px;
+    background: #fff;
+    margin-bottom: 20rpx;
+    height:100vh;
+    padding-top:20rpx;
+    margin-top:20rpx;
 }
 
-.main-card{
+.cj-grade {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    padding: 25rpx 30rpx;
+}
+
+.cj-grade-logo {
+    width: 100rpx;
+    height: 100rpx;
+}
+
+.cj-grade-term {
+    flex: 1;
+    padding-left: 30rpx;
+    color: #666;
+    font-size: 11pt;
+    line-height: 160%;
+}
+
+.cj-grade-fst {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.main-card {
     display: flex;
     flex-direction: column;
-    /* background: #fff; */
+    background: #fff;
     border-top: 1rpx solid #e5e5e5;
     border-bottom: 1rpx solid #e5e5e5;
     border-radius: 10rpx;
@@ -67,29 +97,24 @@ page {
     background-position: bottom center; */
     overflow: hidden;
     padding: 20rpx;
-    background-color: #f86d4e;
+
 }
 
-.main-card-item{
-    margin-bottom:10rpx;
-    /* border-bottom: 1px dotted #e5e5e5; */
+.main-card-item {
+    margin-bottom: 10rpx;
+    border-bottom: 1px dotted #e5e5e5;
     padding: 10rpx;
     display: flex;
     justify-content: space-between;
-    color:#ccc;
+    color: #888;
 }
 
-.main-card-item-text{
+.main-card-item-text {
     font-size: 11pt;
-    color:#fff;
+    
 }
 
-.book-date {
+.img{
     display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    margin-top: 25rpx;
-    font-size: 9pt;
-    color: #ddd;
+    flex-direction: column;
 }
-

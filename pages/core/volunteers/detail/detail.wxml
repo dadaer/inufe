@@ -1,34 +1,34 @@
 <view class="container">
-    <view class="cj-info-ctn">
-        <view class="cj-grade">
-            <image class="cj-grade-logo" src="/images/core/volunteers.jpg"></image>
-            <view class="cj-grade-term">
-                <view class="cj-grade-fst">
-                    <text>{{detail.title}}}</text>
+        <view class="cj-info-ctn">
+            <view class="cj-grade">
+                <image class="cj-grade-logo" src="/images/core/volunteers.jpg"></image>
+                <view class="cj-grade-term">
+                    <view class="cj-grade-fst">
+                        <text>{{detail.title}}</text>
+                    </view>
+                </view>
+            </view>
+            <view class="main-card">
+                <view class="main-card-item">
+                    <text class="main-card-item-text">报名截止时间</text>
+                    <text class="main-card-item-text">{{detail.jzsj}}</text>
+                </view>
+                <view class="main-card-item">
+                    <text class="main-card-item-text">活动时间</text>
+                    <text class="main-card-item-text">{{detail.hdsj}}</text>
+                </view>
+                <view class="main-card-item">
+                    <text class="main-card-item-text">活动负责方</text>
+                    <text class="main-card-item-text">{{detail.org}}</text>
+                </view>
+                <view class="main-card-item">
+                    <text class="main-card-item-text">活动地点</text>
+                    <text class="main-card-item-text">{{detail.place}}</text>
+                </view>
+                <view class="main-card-item">
+                    <text class="main-card-item-text" style="margin-right: 20rpx;">活动内容</text>
+                    <text class="main-card-item-text">{{detail.content}}</text>
                 </view>
             </view>
         </view>
-        <view class="main-card">
-            <view class="main-card-item">
-                <text class="main-card-item-text">报名截止时间</text>
-                <text class="main-card-item-text">{{detail.jzsj}}</text>
-            </view>
-            <view class="main-card-item">
-                <text class="main-card-item-text">活动时间</text>
-                <text class="main-card-item-text">{{detail.hdsj}}</text>
-            </view>
-            <view class="main-card-item">
-                <text class="main-card-item-text">活动负责方</text>
-                <text class="main-card-item-text">{{detail.org}}</text>
-            </view>
-            <view class="main-card-item">
-                <text class="main-card-item-text">活动地点</text>
-                <text class="main-card-item-text">{{detail.place}}</text>
-            </view>
-            <view class="main-card-item">
-                <text class="main-card-item-text" style="margin-right: 20rpx;">活动内容</text>
-                <text class="main-card-item-text">{{detail.content}}</text>
-            </view>
-        </view>
     </view>
-</view>

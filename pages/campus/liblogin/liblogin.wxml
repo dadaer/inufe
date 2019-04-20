@@ -36,11 +36,6 @@
                             bindfocus="inputFocus" bindblur="inputBlur" />
                         <image src="{{CheckCodePath}}" style='width:70px;height:25px' class='checkcode' bindtap="getCheckCode"></image>
                     </view>
-                    <!-- <view class="input-group {{checkCode_focus ? 'active' : ''}}">
-              <text class="input-label">???</text>
-              <input  cursor-spacing="30" id="checkCode" maxlength="4" placeholder="??????" bindinput="checkcodeInput" bindfocus="inputFocus" bindblur="inputBlur" />
-              <image src="https://dadaer.top:8081/connect/downpic" style='width:70px;height:25px' class='checkcode'></image>
-            </view> -->
                 </form>
                 <view class="confirm-btn" bindtap="bind">
                     <text>绑定</text>

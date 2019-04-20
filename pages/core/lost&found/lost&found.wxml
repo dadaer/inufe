@@ -1,0 +1,28 @@
+<view class="header">
+    <view class="header-list">
+        <view class="header-item active">失物</view>
+        <view>|</view>
+        <view class="header-item">招领</view>
+    </view>
+</view>
+<view class="body">
+    <navigator class="post" url="../lost&found/post/post">
+        ＋
+    </navigator>
+    <block class="card" wx:for="{{list}}">
+        <navigator url="../lost&found/detail/detail" class="main-card" bindtap="getDetail" >
+            <view class="main-card-left" >
+                <view class="title" data-id="{{item.id}}">
+                    {{item.title}}
+                </view>
+                <view class="time"> 
+                    {{item.time}}
+                </view>
+            </view>
+            <view class="main-card-right" >
+                <image src="{{item.imgUrl}}" style="height:300rpx;width:400rpx;border-radius: 8rpx;">
+                </image>
+            </view>
+        </navigator>
+    </block>
+</view>

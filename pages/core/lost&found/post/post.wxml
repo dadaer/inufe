@@ -1,0 +1,47 @@
+<view class="bd">
+    <view >
+        <radio-group name="infoType" class="action" bindchange="radioChange">
+            <label class="margin-left-sm">
+                <radio class="purple sm radio" value="1" checked="{{check}}"></radio>
+                <text>捡到物品</text>
+            </label>
+            <label class="margin-left-sm">
+                <radio class="black sm radio" value="2" checked="{{check}}"></radio>
+                <text>丢失物品</text>
+            </label>
+        </radio-group>
+    </view>
+    <form class="login-form">
+        <view class="input-group {{time_focus ? 'active' : ''}}">
+            <input cursor-spacing="30" id="time" placeholder="时间"  bindinput="timeInput" bindfocus="inputFocus"
+                bindblur="inputBlur" />
+        </view>
+        <view class="input-group {{place_focus ? 'active' : ''}}">
+            <input cursor-spacing="30" id="place" placeholder="地点" bindinput="placeInput" bindfocus="inputFocus"
+                bindblur="inputBlur" />
+        </view>
+        <view class="input-group {{contactInfo_focus ? 'active' : ''}}">
+            <input cursor-spacing="30" id="contactInfo" placeholder="联系方式" bindinput="contactInfoInput"
+                bindfocus="inputFocus" bindblur="inputBlur" />
+        </view>
+        <view class="input-group {{title_focus ? 'active' : ''}}">
+            <input cursor-spacing="30" id="title" placeholder="简要描述" bindinput="titleInput" bindfocus="inputFocus"
+                bindblur="inputBlur" />
+        </view>
+        <view class="input-group {{content_focus ? 'active' : ''}}">
+            <textarea cursor-spacing="30" id="content" placeholder="详细描述" placeholder-style="color:#cdcdcd;" style="height:192rpx;width: 720rpx;padding: 0 25rpx;" bindinput="contentInput"
+                bindfocus="inputFocus" bindblur="inputBlur" />
+        </view>
+        <view>
+            <view style="margin-left:40rpx;color: #cdcdcd;">点击上传图片</view>
+            <view wx:if="{{choosedImage}}">
+            <image src="{{images}}" style="width:260rpx;height:260rpx;margin-left: 40rpx;margin-top:20rpx;" bindtap="uploadImage">
+            </image>
+            </view>
+            <image wx:if="{{!choosedImage}}" src="/images/core/upload.png" style="width:260rpx;height:260rpx;margin-left: 20rpx;" bindtap="uploadImage"></image>        
+        </view>
+    </form>
+    <view class="confirm-btn" bindtap="submit">
+        <text>提交</text>
+    </view>
+</view>
