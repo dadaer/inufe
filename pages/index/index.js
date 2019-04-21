@@ -62,6 +62,20 @@ Page({
         teacher_disabled: false,
         offline_disabled: true
       },
+      {
+        id: 'lostFound',
+        name: '失物招领',
+        disabled: false,
+        teacher_disabled: false,
+        offline_disabled: true
+      },
+      {
+        id: 'loveWall',
+        name: '表白墙',
+        disabled: false,
+        teacher_disabled: false,
+        offline_disabled: true
+      },
       // {
       //   id: 'volunteers',
       //   name: '志愿服务',

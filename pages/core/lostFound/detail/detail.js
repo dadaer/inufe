@@ -1,4 +1,4 @@
-// pages/core/lost&found/lost&found.js
+// pages/core/lost&found/detail/detail.js
 var app = getApp();
 Page({
 
@@ -6,7 +6,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    list:[]
+    detail:{},
+    type:''
   },
 
   /**
@@ -28,17 +29,18 @@ Page({
    */
   onShow: function () {
     var that = this
+    that.setData({
+      type:app.cache.LostFoundType
+    })
     wx.request({
-      url: 'http://localhost:8081/lostfoundinfos?type=' + "1",
-      data: {
-      },
+      url: 'http://localhost:8081/lostfoundinfo?id=' + app.cache.LostFoundId,
+      data: {},
       method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
       // header: {}, // 设置请求的 header
       success: function(res){
-        // success
-        console.log(res.data)
+        // sccess\
         that.setData({
-          list:res.data
+          detail:res.data
         })
       },
       fail: function() {
@@ -83,10 +85,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-
-  getDetail:function (e) {
-    console.log(e.target.dataset.id)
-    app.saveCache("LostFoundId",e.target.dataset.id);
   }
 })

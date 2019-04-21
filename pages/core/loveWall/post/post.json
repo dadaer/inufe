@@ -1,3 +1,5 @@
 {
-  "usingComponents": {}
+  "navigationBarBackgroundColor": "#eb6486",
+  "navigationBarTitleText": "表白墙",
+  "backgroundColor": "#eb6486"
 }

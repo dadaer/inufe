@@ -50,14 +50,14 @@ swiper {
   align-content: flex-start;
   background: #fff;
   padding: 15rpx 10rpx 10rpx;
-  margin: 0 30rpx 40rpx;
-  /* margin: 0 30rpx 0; */
+  /* margin: 0 30rpx 40rpx; */
+  margin: 0 30rpx 10rpx;
   overflow: hidden;
-  height: 85px;
-  /* height: 170px; */
+  /* height: 85px; */
+  height: 170px;
   width: 672rpx;
   /* 滑块时需要加上下面属性 */
-  white-space: nowrap;
+  /* white-space: nowrap; */
 }
 
 .main-core {
@@ -79,8 +79,8 @@ swiper {
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  width: 22.7%;
-  /* width: 25%; */
+  /* width: 22.7%; */
+  width: 25%;
   height: 170rpx;
 }
 

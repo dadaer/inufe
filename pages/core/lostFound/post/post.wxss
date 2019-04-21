@@ -40,7 +40,7 @@ form {
 }
 
 .input-group.active {
-    border: 2px solid #7acfa6;
+    border: 2px solid #7fb7d0;
 }
 
 .input-label {
@@ -86,7 +86,7 @@ form {
     font-size: 13pt;
     line-height: 85rpx;
     height: 85rpx;
-    background: #7acfa6;
+    background: #7fb7d0;
     color: #fff;
     text-align: center;
     border-radius: 5px;

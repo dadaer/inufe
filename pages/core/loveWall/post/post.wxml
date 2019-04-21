@@ -1,2 +1,20 @@
-<!--pages/core/loveWall/post/post.wxml-->
-<text>pages/core/loveWall/post/post.wxml</text>
+<view class="bd">
+    <form class="login-form">
+        <view class="input-group {{content_focus ? 'active' : ''}}">
+            <textarea cursor-spacing="30" id="content" placeholder="详细描述" placeholder-style="color:#cdcdcd;"
+                style="height:300rpx;width: 720rpx;padding: 0 25rpx;" bindinput="contentInput" bindfocus="inputFocus"
+                bindblur="inputBlur" />
+        </view>
+        <view>
+            <view style="margin-left:40rpx;color: #cdcdcd;">点击上传图片</view>
+            <view wx:if="{{choosedImage}}">
+                <image src="{{images}}" style="width:260rpx;height:260rpx;margin-left: 40rpx;margin-top:20rpx;" bindtap="uploadImage">
+                </image>
+            </view>
+                <image wx:if="{{!choosedImage}}" src="/images/core/upload.png" style="width:260rpx;height:260rpx;margin-left: 20rpx;" bindtap="uploadImage"></image>        
+        </view>
+    </form>
+        <view class="confirm-btn" bindtap="submit">
+            <text>发布</text>
+        </view>
+</view>

@@ -170,22 +170,23 @@
 				},
 				{
 					"id": -1,
-					"name": "lost&found",
-					"pathName": "pages/core/lost&found/lost&found",
+					"name": "loveWall",
+					"pathName": "pages/core/loveWall/loveWall",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
-					"name": "lost&found detail",
-					"pathName": "pages/core/lost&found/detail/detail",
+					"name": "loveWall post",
+					"pathName": "pages/core/loveWall/post/post",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
-					"name": "lost&found post",
-					"pathName": "pages/core/lost&found/post/post",
+					"name": "lostFound",
+					"pathName": "pages/core/lostFound/lostFound",
+					"query": "",
 					"scene": null
 				}
 			]
