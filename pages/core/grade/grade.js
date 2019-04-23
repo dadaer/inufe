@@ -18,7 +18,7 @@ Page({
       })
     }else{
     wx.request({
-      url: 'https://dadaer.top:8081/management/grade',
+      url: 'https://dadaer.top:8082/management/grade',
       data: {},
       header:{
         'Cookie':'JSESSIONID=' + app.cache.cookie
@@ -46,7 +46,7 @@ Page({
             if (res.confirm) {
               wx.clearStorage();
               wx.request({
-                url: 'https://dadaer.top:8081/management/init',
+                url: 'https://dadaer.top:8082/management/init',
                 success: function (res) {
                   app.saveCache("cookie", res.data.extend.cookies)
                 }

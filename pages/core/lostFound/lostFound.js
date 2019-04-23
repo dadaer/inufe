@@ -77,7 +77,7 @@ Page({
   getInfo: function (type,pageNo) {
     var that = this
     wx.request({
-      url: 'http://localhost:8081/lostfoundinfos?type=' + type + "&pageNo?=" 
+      url: 'https://dadaer.top:8082/lostfoundinfos?type=' + type + "&pageNo?=" 
       + pageNo,
       data: {
         

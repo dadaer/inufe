@@ -33,7 +33,7 @@ Page({
       type:app.cache.LostFoundType
     })
     wx.request({
-      url: 'http://localhost:8081/lostfoundinfo?id=' + app.cache.LostFoundId,
+      url: 'https://dadaer.top:8082/lostfoundinfo?id=' + app.cache.LostFoundId,
       data: {},
       method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
       // header: {}, // 设置请求的 header

@@ -30,7 +30,7 @@ Page({
     var that = this;
     var id = app.cache.volunteerId;
     wx.request({
-      url: 'http://localhost:8081/volunteer?id=' + id,
+      url: 'http://localhost:8082/volunteer?id=' + id,
       data: {},
       method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
       // header: {}, // 设置请求的 header

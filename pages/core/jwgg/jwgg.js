@@ -12,7 +12,7 @@ Page({
   onShow: function () {
     var that = this;
     wx.request({
-      url: 'https://dadaer.top:8081/news/jwgg',
+      url: 'https://dadaer.top:8082/news/jwgg',
       data: {},
       method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
       // header: {}, // 设置请求的 header

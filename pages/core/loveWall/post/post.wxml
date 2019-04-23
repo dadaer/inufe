@@ -6,7 +6,7 @@
                 bindblur="inputBlur" />
         </view>
         <view>
-            <view style="margin-left:40rpx;color: #cdcdcd;">点击上传图片</view>
+            <view style="margin-left:40rpx;color: #cdcdcd;">点击上传图片(图片不可为空!)</view>
             <view wx:if="{{choosedImage}}">
                 <image src="{{images}}" style="width:260rpx;height:260rpx;margin-left: 40rpx;margin-top:20rpx;" bindtap="uploadImage">
                 </image>

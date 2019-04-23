@@ -20,7 +20,7 @@
                     </view>
                 </view>
                 <view class="main-card-right">
-                    <image src="{{item.imgUrl}}" style="height:300rpx;width:400rpx;border-radius: 8rpx;">
+                    <image src="{{'https://dadaer.top:8082/image?imgUrl=' + item.imgUrl}}" style="height:300rpx;width:400rpx;border-radius: 8rpx;">
                     </image>
                 </view>
             </navigator>
@@ -36,7 +36,7 @@
                     </view>
                 </view>
                 <view class="main-card-right">
-                    <image src="{{item.imgUrl}}" style="height:300rpx;width:400rpx;border-radius: 8rpx;">
+                    <image src="{{'https://dadaer.top:8082/image?imgUrl=' + item.imgUrl}}" style="height:300rpx;width:400rpx;border-radius: 8rpx;">
                     </image>
                 </view>
             </navigator>

@@ -35,7 +35,7 @@ Page({
       })
     } else {
       wx.request({
-        url: 'https://dadaer.top:8081/management/course',
+        url: 'https://dadaer.top:8082/management/course',
         data: {},
         header: {
           'Cookie': 'JSESSIONID=' + app.cache.cookie

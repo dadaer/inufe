@@ -5,8 +5,11 @@ Page({
    * 页面的初始数据
    */
   data: {
-    list:[],
-    pageNo:1
+    list: [],
+    images: [],
+    listShow:[],
+    imagePath: '',
+    pageNo: 1
   },
 
   /**
@@ -27,11 +30,11 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-      var pages = this.data.pageNo;
-      var that = this;
-      for( var i = 1;i <= pages; i++){
-          that.getInfo(i)
-      }
+    var that = this;
+    var pages = that.data.pageNo;
+    for (var i = 1; i <= pages; i++) {
+      that.getInfo(i)
+    }
   },
 
   /**
@@ -67,32 +70,45 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-    
+
   },
 
-  getInfo:function(pageNo) {
+  getInfo: function (pageNo) {
     var that = this;
-      wx.request({
-        url: 'http://localhost:8081/lovewallinfos?pageNo=' + pageNo,
-        data: {},
-        method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
-        // header: {}, // 设置请求的 header
-        success: function(res){
-          // success
-          that.setData({
-            list:res.data
-          })
-        },
-        fail: function() {
-          // fail
-        },
-        complete: function() {
-          // complete
-        }
-      })
+    
+    wx.request({
+      url: 'https://dadaer.top:8082/lovewallinfos?pageNo=' + pageNo,
+      data: {},
+      method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+      // header: {}, // 设置请求的 header
+      success: function (res) {
+        // success
+        that.setData({
+          list: res.data
+        })
+        console.log(that.data.list)
+      },
+      fail: function () {
+        // fail
+      },
+      complete: function () {
+        // complete
+      }
+    })
   },
 
-  previewImage: function (e) {  
-    
-	}
+  previewImage: function (e) {
+    var list = this.data.list;
+    var images = [];
+    console.log(list.length)
+    for (var i = 0; i < list.length; i++) {
+      images.push('https://dadaer.top:8082/image?imgUrl=' + list[i].imgUrl)
+    }
+    this.setData({
+      images: images
+    })
+    wx.previewImage({
+      urls: this.data.images // 需要预览的图片http链接列表  
+    })
+  }
 })

@@ -43,7 +43,7 @@
             <block class="current" wx:if="{{active.type == 'current'}}">
                 <view class="tsg-list" wx:if="{{book_current_list}}">
                     <view class="tsg-item" wx:for="{{book_current_list}}" >
-                        <view class="tsg-book" style="background-image: url('https://dadaer.top:8081/image?imgUrl=/home/book.png')">
+                        <view class="tsg-book" style="background-image: url('https://dadaer.top:8082/image?imgUrl=/home/book.png')">
                             <view class="tsg-pickup-time">
                                 <text class="tsg-pickup-time-value">{{item.jyrq}}</text>
                                 <text class="tsg-pickup-time-text">借</text>

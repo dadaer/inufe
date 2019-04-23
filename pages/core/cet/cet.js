@@ -14,7 +14,7 @@ Page({
       })
     }else{
     wx.request({
-      url: 'https://dadaer.top:8081/management/cet',
+      url: 'https://dadaer.top:8082/management/cet',
       data: {},
       header:{
         'Cookie':'JSESSIONID=' + app.cache.cookie
@@ -42,7 +42,7 @@ Page({
             if (res.confirm) {
               wx.clearStorage();
               wx.request({
-                url: 'https://dadaer.top:8081/management/init',
+                url: 'https://dadaer.top:8082/management/init',
                 success: function (res) {
                   app.saveCache("cookie", res.data.extend.cookies)
                 }

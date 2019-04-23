@@ -9,7 +9,7 @@ Page({
     that.getCheckCodeCookie();
     // setTimeout(function(){
     //   wx.getImageInfo({
-    //     src: 'http://localhost:8081/image?imgUrl=' + "C:\\Users\\一号公路上的桥断了\\Desktop\\" +app.cache.cookie.substring(0,12) + ".png",      
+    //     src: 'http://localhost:8082/image?imgUrl=' + "C:\\Users\\一号公路上的桥断了\\Desktop\\" +app.cache.cookie.substring(0,12) + ".png",      
     //     success: function (res) {
     //       // success
     //       that.setData({
@@ -27,7 +27,7 @@ Page({
     })
     wx.request({
       method: 'GET',
-      url: "https://dadaer.top:8081/management/login",
+      url: "https://dadaer.top:8082/management/login",
       data: {
         stuName: _this.data.userName,
         stuNum: _this.data.stuNum,
@@ -69,7 +69,7 @@ Page({
   getCheckCodeCookie:function(){
     var that = this;
     wx.request({
-      url: 'https://dadaer.top:8081/management/checkCode',
+      url: 'https://dadaer.top:8082/management/checkCode',
       data: {},
       header:{
         'Cookie':'JSESSIONID=' + app.cache.cookie
@@ -80,7 +80,7 @@ Page({
         // success
         setTimeout(function(){
           wx.getImageInfo({
-            src: 'https://dadaer.top:8081/image?imgUrl=/home/checkCode/' 
+            src: 'https://dadaer.top:8082/image?imgUrl=/home/checkCode/' 
             + app.cache.cookie.substring(0,12) + 'checkCode.png',
             success: function (res) {
               // success

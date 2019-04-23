@@ -45,7 +45,7 @@ Page({
       })
     } else if (app.cache.password) {
       wx.request({
-        url: 'https://dadaer.top:8081/lib/history',
+        url: 'https://dadaer.top:8082/lib/history',
         header: {
           'Cookie': 'JSESSIONID=' + app.cache.libcookie
         },
@@ -78,7 +78,7 @@ Page({
       })
     } else if (app.cache.password) {
       wx.request({
-        url: 'https://dadaer.top:8081/lib/current',
+        url: 'https://dadaer.top:8082/lib/current',
         header: {
           'Cookie': 'JSESSIONID=' + app.cache.libcookie
         },
@@ -114,7 +114,7 @@ Page({
 
   liblogin: function () {
     wx.request({
-      url: 'https://dadaer.top:8081/lib/init',
+      url: 'https://dadaer.top:8082/lib/init',
       data: {},
       header: {
         'Cookie': 'JSESSIONID=' + app.cache.libcookie
@@ -163,7 +163,7 @@ Page({
       title: '加载中'
     })
     wx.request({
-      url: 'https://dadaer.top:8081/bookDetail',
+      url: 'https://dadaer.top:8082/bookDetail',
       data: {
         search_book: this.data.search_book
       },

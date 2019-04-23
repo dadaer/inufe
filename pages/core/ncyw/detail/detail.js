@@ -11,7 +11,7 @@ Page({
       title: '加载中'
     });
     wx.request({
-      url: 'https://dadaer.top:8081/news/yw_detail',
+      url: 'https://dadaer.top:8082/news/yw_detail',
       data: {
         src: app.cache.src,
       },

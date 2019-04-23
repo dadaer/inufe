@@ -29,7 +29,7 @@ Page({
   onShow: function () {
     var that = this;
     wx.request({
-      url: 'http://localhost:8081/volunteers',
+      url: 'http://localhost:8082/volunteers',
       data: {},
       method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
       // header: {}, // 设置请求的 header

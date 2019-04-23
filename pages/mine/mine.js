@@ -43,7 +43,7 @@ Page({
       app.removeCache('exam'),
       app.removeCache('cet'),
       wx.request({
-        url: 'https://dadaer.top:8081/management/init',
+        url: 'https://dadaer.top:8082/management/init',
         data: {},
         method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
         // header: {}, // 设置请求的 header

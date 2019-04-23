@@ -5,15 +5,15 @@ Page({
     imgUrls: [
       {
         id: 'swiper1',
-        src: 'https://dadaer.top:8081/image?imgUrl=/home/swiper1.jpg'
+        src: 'https://dadaer.top:8082/image?imgUrl=/home/swiper1.jpg'
       },
       {
         id: 'swiper2',
-        src: 'https://dadaer.top:8081/image?imgUrl=/home/swiper2.jpg'
+        src: 'https://dadaer.top:8082/image?imgUrl=/home/swiper2.jpg'
       },
       {
         id: 'swiper3',
-        src: 'https://dadaer.top:8081/image?imgUrl=/home/swiper3.jpg'
+        src: 'https://dadaer.top:8082/image?imgUrl=/home/swiper3.jpg'
       } 
     ],
     indicatorDots: true,
@@ -132,7 +132,7 @@ Page({
     app.saveCache("version","v1.0.0");
     if(!app.cache.stuNum){
       wx.request({
-        url: 'https://dadaer.top:8081/management/init',
+        url: 'https://dadaer.top:8082/management/init',
         data: {},
         method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
         // header: {}, // 设置请求的 header
@@ -154,7 +154,7 @@ Page({
     }
     var that = this; 
       wx.request({
-        url: 'https://dadaer.top:8081/news/jwgg',
+        url: 'https://dadaer.top:8082/news/jwgg',
         data: {},
         header:{
           'Cookie':'JSESSIONID=' + app.cache.cookie
@@ -186,7 +186,7 @@ Page({
       }),
 
       wx.request({
-        url: 'https://dadaer.top:8081/news/ncyw',
+        url: 'https://dadaer.top:8082/news/ncyw',
         data: {},
         header:{
           'Cookie':'JSESSIONID=' + app.cache.cookie
@@ -218,7 +218,7 @@ Page({
       }),
 
       wx.request({
-        url: 'https://dadaer.top:8081/listPassage',
+        url: 'https://dadaer.top:8082/listPassage',
         data: {},
         header:{
           'Cookie':'JSESSIONID=' + app.cache.cookie
@@ -278,7 +278,7 @@ Page({
       })
     }else if(app.cache.stuNum){
     wx.request({
-        url: 'https://dadaer.top:8081/management/course',
+        url: 'https://dadaer.top:8082/management/course',
         data: {},
         header:{
           'Cookie':'JSESSIONID=' + app.cache.cookie

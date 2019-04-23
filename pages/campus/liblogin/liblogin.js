@@ -15,7 +15,7 @@ Page({
         })
         wx.request({
             method: 'GET',
-            url: "https://dadaer.top:8081/lib/number",
+            url: "https://dadaer.top:8082/lib/number",
             data: {
                 stuNum: _this.data.stuNum,
                 password: _this.data.password,
@@ -55,7 +55,7 @@ Page({
     getCheckCode: function () {
         var that = this;
         wx.request({
-            url: 'https://dadaer.top:8081/lib/captcha',
+            url: 'https://dadaer.top:8082/lib/captcha',
             data: {},
             header: {
                 'Cookie': 'JSESSIONID=' + app.cache.libcookie
@@ -66,7 +66,7 @@ Page({
                 // success
                 setTimeout(function(){
                     wx.getImageInfo({
-                        src: 'https://dadaer.top:8081/image?imgUrl=/home/captcha/' + app.cache.libcookie.substring(0,12) + 'captcha.png',
+                        src: 'https://dadaer.top:8082/image?imgUrl=/home/captcha/' + app.cache.libcookie.substring(0,12) + 'captcha.png',
                         success: function (res) {
                             // success
                             console.log(res.path)

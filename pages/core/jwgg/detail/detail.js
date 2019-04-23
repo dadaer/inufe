@@ -13,7 +13,7 @@ Page({
       title: '加载中'
     });
     wx.request({
-      url: 'https://dadaer.top:8081/news/jw_detail',
+      url: 'https://dadaer.top:8082/news/jw_detail',
       data: {
         src: app.cache.src,
       },

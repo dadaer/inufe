@@ -95,11 +95,16 @@ Page({
   },
 
   submit:function() {
+    wx.showToast({
+      title: '上传中',
+      icon: 'loading',
+      duration: 3000
+    });
     var that = this;
     var data = new Date();
     var time = data.toLocaleString('zh')
     wx.uploadFile({
-      url: 'http://localhost:8081/uploadImage',
+      url: 'https://dadaer.top:8082/uploadImage',
       filePath:that.data.images,
       name:'file',
       // header: {}, // 设置请求的 header
@@ -108,7 +113,7 @@ Page({
         // success
         console.log(that.data.title)
         wx.request({
-          url: 'http://localhost:8081/addLostFoundInfo',
+          url: 'https://dadaer.top:8082/addLostFoundInfo',
           data: {
             type:that.data.type,
             time:that.data.time,
@@ -116,7 +121,7 @@ Page({
             contactInfo:that.data.contactInfo,
             title:that.data.title,
             content:that.data.content,
-            imgUrl:that.data.images,
+            imgUrl:res.data,
             postTime:time
           },
           method: 'POST', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
@@ -128,6 +133,7 @@ Page({
             // success
             console.log(res.data)
             if(res.data == 1) {
+              wx.hideToast();
               wx.showModal({
                 title: '提示',
                 // showCancel: false,
@@ -150,18 +156,22 @@ Page({
                 confirmText: '确定',
                 showCancel:false,
                 success(res) {
-                  if (res.confirm) {
-                    wx.navigateBack({
-                      delta: 1, // 回退前 delta(默认为1) 页面
-                    })
-                  } 
+                   
                 }
               })
             }
           },
           fail: function() {
             // fail
-            
+            wx.showModal({
+              title: '提示',
+              // showCancel: false,
+              content: '图片不可为空',
+              confirmText: '确定',
+              showCancel:false,
+              success(res) {
+              }
+            })
           },
           complete: function() {
             // complete
