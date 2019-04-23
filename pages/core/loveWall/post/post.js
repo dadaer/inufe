@@ -1,4 +1,5 @@
 // pages/core/loveWall/post/post.js
+var app = getApp();
 Page({
 
   /**
@@ -112,7 +113,8 @@ Page({
           data: {
             content:that.data.content,
             imgUrl:res.data,
-            postTime:time
+            postTime:time,
+            stuNum:app.cache.stuNum
           },
           method: 'POST', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
           // header: {}, // 设置请求的 header

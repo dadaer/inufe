@@ -107,7 +107,9 @@ Page({
     this.setData({
       images: images
     })
+    console.log(images)
     wx.previewImage({
+      current:'https://dadaer.top:8082/image?imgUrl=' + e.target.dataset.src,
       urls: this.data.images // 需要预览的图片http链接列表  
     })
   }

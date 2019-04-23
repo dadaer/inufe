@@ -51,7 +51,7 @@ swiper {
   background: #fff;
   padding: 15rpx 10rpx 10rpx;
   /* margin: 0 30rpx 40rpx; */
-  margin: 0 30rpx 10rpx;
+  margin: 0 30rpx 0;
   overflow: hidden;
   /* height: 85px; */
   height: 170px;
@@ -80,22 +80,23 @@ swiper {
   align-items: center;
   box-sizing: border-box;
   /* width: 22.7%; */
-  width: 25%;
+  width: 20%;
   height: 170rpx;
 }
 
 .core-item-icon {
   display: block;
-  width: 100rpx;
-  height: 100rpx;
+  width: 90rpx;
+  height: 90rpx;
   margin: 10rpx auto;
 }
 
 .core-item-name {
   display: block;
   margin: 5rpx;
-  font-size: 28rpx;
+  font-size: 26rpx;
   text-align: center;
+  color:#777;
 }
 
 .main-card {
