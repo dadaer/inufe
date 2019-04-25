@@ -1,6 +1,6 @@
 //app.js
 App({
-  version: 'v1.0.0', //版本号
+  version: 'v1.2.0', //版本号
   onLaunch: function () {
     var _this = this;
     //读取缓存
@@ -19,11 +19,11 @@ App({
         console.log(_this.version);
 
         // 版本改动较大时需要清除缓存重新登录
-        //不轻易使用
-        // if (_this.cache.version !== _this.version  || !_this.cache.version) {
-        //    _this.cache = {};
-        //    wx.clearStorage();
-        // } 
+        // 不轻易使用
+        if (_this.cache.version !== _this.version  || !_this.cache.version) {
+           _this.cache = {};
+           wx.clearStorage();
+        } 
 
         // else {
           // _this._user.wx = _this.cache.userinfo.userInfo || {};

@@ -29,7 +29,6 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
   },
 
   /**
@@ -91,14 +90,35 @@ Page({
   },
 
   submit:function() {
+    Date.prototype.format = function(fmt) { 
+      var o = { 
+         "M+" : this.getMonth()+1,                 //月份 
+         "d+" : this.getDate(),                    //日 
+         "h+" : this.getHours(),                   //小时 
+         "m+" : this.getMinutes(),                 //分 
+         "s+" : this.getSeconds(),                 //秒 
+         "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+         "S"  : this.getMilliseconds()             //毫秒 
+     }; 
+     if(/(y+)/.test(fmt)) {
+             fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+     }
+      for(var k in o) {
+         if(new RegExp("("+ k +")").test(fmt)){
+              fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length)));
+          }
+      }
+     return fmt; 
+    }
     wx.showToast({
       title: '上传中',
       icon: 'loading',
-      duration: 3000
+      duration: 9000
     });
     var that = this;
-    var data = new Date();
-    var time = data.toLocaleString('zh')
+    var time = new Date().format("yyyy-MM-dd hh:mm:ss")
+    // var date = new Date()
+    // var time = date.toLocaleString('zh')
     wx.uploadFile({
       url: 'https://dadaer.top:8082/uploadImage',
       filePath:that.data.images,
@@ -108,6 +128,7 @@ Page({
       success: function(res){
         // success
         console.log(that.data.title)
+        app.saveCache("postLove",true)
         wx.request({
           url: 'https://dadaer.top:8082/addLoveWallInfo',
           data: {

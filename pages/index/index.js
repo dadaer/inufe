@@ -129,7 +129,7 @@ Page({
 
   onLoad:function(){
     console.log(app.cache.stuNum)
-    app.saveCache("version","v1.0.0");
+    app.saveCache("version","v1.2.0");
     if(!app.cache.stuNum){
       wx.request({
         url: 'https://dadaer.top:8082/management/init',

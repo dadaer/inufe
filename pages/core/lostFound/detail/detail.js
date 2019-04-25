@@ -7,7 +7,8 @@ Page({
    */
   data: {
     detail:{},
-    type:''
+    type:'',
+    images:[]
   },
 
   /**
@@ -40,7 +41,7 @@ Page({
       success: function(res){
         // sccess\
         that.setData({
-          detail:res.data
+          detail:res.data,
         })
       },
       fail: function() {
@@ -85,5 +86,15 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  previewImage:function(e) {
+    var detail = this.data.detail;
+    var images = [];
+    images.push('https://dadaer.top:8082/image?imgUrl=' + detail.imgUrl)
+      wx.previewImage({
+        current:'https://dadaer.top:8082/image?imgUrl=' + e.target.dataset.src,
+        urls: images // 需要预览的图片http链接列表
+      })
   }
 })

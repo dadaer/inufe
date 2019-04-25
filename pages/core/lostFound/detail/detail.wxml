@@ -35,7 +35,7 @@
                 </view>
                 <view class="main-card-item img">
                     <text class="main-card-item-text">图片信息</text>
-                    <image src="{{'https://dadaer.top:8082/image?imgUrl=' + detail.imgUrl}}" style="width:99%;height:400rpx;margin-top:20rpx;border-radius:8rpx;"></image>
+                    <image src="{{'https://dadaer.top:8082/image?imgUrl=' + detail.imgUrl}}" style="width:99%;height:400rpx;margin-top:20rpx;border-radius:8rpx;" bindtap="previewImage" data-src="{{item.imgUrl}}"></image>
                 </view>
             </view>
         </view>

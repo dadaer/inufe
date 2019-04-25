@@ -1,7 +1,7 @@
 <view class="bd">
     <form class="login-form">
         <view class="input-group {{content_focus ? 'active' : ''}}">
-            <textarea cursor-spacing="30" id="content" placeholder="详细描述" placeholder-style="color:#cdcdcd;"
+            <textarea cursor-spacing="30" id="content"  placeholder="大胆开始你的表白吧!" placeholder-style="color:#cdcdcd;"
                 style="height:300rpx;width: 720rpx;padding: 0 25rpx;" bindinput="contentInput" bindfocus="inputFocus"
                 bindblur="inputBlur" />
         </view>

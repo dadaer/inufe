@@ -6,18 +6,26 @@ Page({
    * 页面的初始数据
    */
   data: {
-    list:[],
-    active:{
-      type:"2"
+    // list: [],
+    // newList:[],
+    active: {
+      type: "2"
     },
-    pageNo:1
+    lostList: [],
+    foundList: [],
+    lostPageNo: 1,
+    foundPageNo: 1,
+    lostPages: 1,
+    foundPages: 1
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-
+  onLoad: function () {
+    var pages = this.data.lostPageNo;
+    var that = this;
+    that.getInfo(that.data.active.type, pages)
   },
 
   /**
@@ -31,11 +39,50 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    var pages = this.data.pageNo;
-      var that = this;
-      for( var i = 1;i <= pages; i++){
-          that.getInfo(that.data.active.type,i)
-      }
+    var that = this;
+    if (app.cache.postLost) {
+      wx.request({
+        url: 'https://dadaer.top:8082/lostfoundinfos?type=2&pageNo=1',
+        data: {},
+        method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+        // header: {}, // 设置请求的 header
+        success: function(res){
+          // success
+          that.setData({
+            lostList:res.data.list,
+            lostPageNo:1
+          })
+        },
+        fail: function() {
+          // fail
+        },
+        complete: function() {
+          // complete
+        }
+      })
+      app.removeCache("postLost")
+    } else if ( app.cache.postFound) {
+      wx.request({
+        url: 'https://dadaer.top:8082/lostfoundinfos?type=1&pageNo=1',
+        data: {},
+        method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+        // header: {}, // 设置请求的 header
+        success: function(res){
+          // success
+          that.setData({
+            foundList:res.data.list,
+            foundPageNo:1
+          })
+        },
+        fail: function() {
+          // fail
+        },
+        complete: function() {
+          // complete
+        }
+      })
+      app.removeCache("postFound")
+    }
   },
 
   /**
@@ -63,8 +110,30 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    var pageNo = this.data.pageNo + 1
-    this.getInfo(this.data.active.type,pageNo)
+    if (this.data.active.type == 1) {
+      var foundPageNo = this.data.foundPageNo;
+      if (foundPageNo < this.data.foundPages) {
+        foundPageNo = foundPageNo + 1;
+        this.setData({
+          foundPageNo: foundPageNo
+        })
+        this.getInfo(this.data.active.type, foundPageNo)
+      } else {
+        console.log("到底了")
+      }
+    } else {
+      var lostPageNo = this.data.lostPageNo;
+      if (lostPageNo < this.data.lostPages) {
+        lostPageNo = lostPageNo + 1
+        this.setData({
+          lostPageNo: lostPageNo
+        })
+        this.getInfo(this.data.active.type, lostPageNo)
+      } else {
+        console.log("到底了")
+      }
+    }
+
   },
 
   /**
@@ -74,43 +143,89 @@ Page({
 
   },
 
-  getInfo: function (type,pageNo) {
+  getInfo: function (type, pageNo) {
     var that = this
     wx.request({
-      url: 'https://dadaer.top:8082/lostfoundinfos?type=' + type + "&pageNo?=" 
-      + pageNo,
-      data: {
-        
-      },
+      url: 'https://dadaer.top:8082/lostfoundinfos?type=' + type + "&pageNo=" + pageNo,
+      data: {},
       method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
       // header: {}, // 设置请求的 header
-      success: function(res){
+      success: function (res) {
         // success
         console.log(res.data)
-        that.setData({
-          list:res.data
-        })
+        console.log(that.data.active.type)
+        if (that.data.active.type == 2) {
+          that.setData({
+            lostList: that.data.lostList.concat(res.data.list),
+            lostPages: res.data.pages
+          })
+        } else {
+          that.setData({
+            foundList: that.data.foundList.concat(res.data.list),
+            foundPages: res.data.pages
+          })
+        }
       },
-      fail: function() {
+      fail: function () {
         // fail
       },
-      complete: function() {
+      complete: function () {
         // complete
       }
     })
   },
 
-  getDetail:function (e) {
+  getDetail: function (e) {
     console.log(e.target.dataset.id)
-    app.saveCache("LostFoundId",e.target.dataset.id)
-    app.saveCache("LostFoundType",e.target.dataset.type)
+    app.saveCache("LostFoundId", e.target.dataset.id)
+    app.saveCache("LostFoundType", e.target.dataset.type)
   },
 
   changeFilter: function (e) {
     console.log(e.target.dataset.type)
     this.setData({
-      'active.type':e.target.dataset.type
+      'active.type': e.target.dataset.type
     })
-    this.getInfo(this.data.active.type,this.data.pageNo)
+    if (this.data.active.type == 1) {
+      wx.request({
+        url: 'https://dadaer.top:8082/lostfoundinfos?type=1&pageNo=1',
+        data: {},
+        method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+        // header: {}, // 设置请求的 header
+        success: function(res){
+          // success
+          that.setData({
+            foundList:res.data.list,
+            foundPageNo:1
+          })
+        },
+        fail: function() {
+          // fail
+        },
+        complete: function() {
+          // complete
+        }
+      })
+    } else {
+      wx.request({
+        url: 'https://dadaer.top:8082/lostfoundinfos?type=2&pageNo=1',
+        data: {},
+        method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+        // header: {}, // 设置请求的 header
+        success: function(res){
+          // success
+          that.setData({
+            lostList:res.data.list,
+            lostPageNo:1
+          })
+        },
+        fail: function() {
+          // fail
+        },
+        complete: function() {
+          // complete
+        }
+      })
+    }
   }
 })

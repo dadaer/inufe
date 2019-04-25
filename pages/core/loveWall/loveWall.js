@@ -1,4 +1,5 @@
 // pages/core/loveWall/loveWall.js
+var app = getApp();
 Page({
 
   /**
@@ -7,16 +8,19 @@ Page({
   data: {
     list: [],
     images: [],
-    listShow:[],
+    listShow: [],
     imagePath: '',
-    pageNo: 1
+    pageNo: 1,
+    pages: 1
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var that = this;
+    var pageNo = that.data.pageNo;
+    that.getInfo(pageNo)
   },
 
   /**
@@ -31,9 +35,27 @@ Page({
    */
   onShow: function () {
     var that = this;
-    var pages = that.data.pageNo;
-    for (var i = 1; i <= pages; i++) {
-      that.getInfo(i)
+    if(app.cache.postLove) {
+      wx.request({
+        url: 'https://dadaer.top:8082/lovewallinfos?pageNo=1',
+        data: {},
+        method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+        // header: {}, // 设置请求的 header
+        success: function(res){
+          // success
+          that.setData({
+            list:res.data.list,
+            pageNo:1
+          })
+        },
+        fail: function() {
+          // fail
+        },
+        complete: function() {
+          // complete
+        }
+      })
+    app.removeCache("postLove")
     }
   },
 
@@ -62,8 +84,18 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    var pageNo = this.data.pageNo + 1
-    this.getInfo(pageNo)
+    var pageNo = this.data.pageNo;
+    var that = this;
+    if (pageNo < that.data.pages) {
+      console.log(that.data.pages)
+      pageNo = pageNo + 1;
+      that.getInfo(pageNo)
+      that.setData({
+        pageNo: pageNo
+      })
+    } else {
+      console.log("到底了")
+    }
   },
 
   /**
@@ -75,7 +107,6 @@ Page({
 
   getInfo: function (pageNo) {
     var that = this;
-    
     wx.request({
       url: 'https://dadaer.top:8082/lovewallinfos?pageNo=' + pageNo,
       data: {},
@@ -84,7 +115,8 @@ Page({
       success: function (res) {
         // success
         that.setData({
-          list: res.data
+          list: that.data.list.concat(res.data.list),
+          pages: res.data.pages
         })
         console.log(that.data.list)
       },
@@ -109,7 +141,7 @@ Page({
     })
     console.log(images)
     wx.previewImage({
-      current:'https://dadaer.top:8082/image?imgUrl=' + e.target.dataset.src,
+      current: 'https://dadaer.top:8082/image?imgUrl=' + e.target.dataset.src,
       urls: this.data.images // 需要预览的图片http链接列表  
     })
   }
