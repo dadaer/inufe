@@ -63,6 +63,20 @@ Page({
         offline_disabled: true
       },
       {
+        id: 'bus',
+        name: '班车时刻',
+        disabled: false,
+        teacher_disabled: false,
+        offline_disabled: true
+      },
+      {
+        id: 'phones',
+        name: '校园黄页',
+        disabled: false,
+        teacher_disabled: false,
+        offline_disabled: true
+      },
+      {
         id: 'lostFound',
         name: '失物招领',
         disabled: false,

@@ -4,9 +4,11 @@ Page({
         help_status: true,
         CheckCodePath: ''
     },
+
     onShow: function () {
         this.getCheckCode();
     },
+
     bind: function () {
         var _this = this;
         wx.showToast({
@@ -52,6 +54,7 @@ Page({
             }
         })
     },
+
     getCheckCode: function () {
         var that = this;
         wx.request({
@@ -101,16 +104,19 @@ Page({
             wx.hideKeyboard();
         }
     },
+
     passwdInput: function (e) {
         this.setData({
             password: e.detail.value
         });
     },
+
     checkcodeInput: function (e) {
         this.setData({
             checkCode: e.detail.value
         });
     },
+
     inputFocus: function (e) {
         if (e.target.id == 'checkCode') {
             this.setData({
@@ -126,6 +132,7 @@ Page({
             });
         }
     },
+
     inputBlur: function (e) {
         if (e.target.id == 'checkCode') {
             this.setData({
@@ -141,6 +148,7 @@ Page({
             });
         }
     },
+    
     tapHelp: function (e) {
         this.setData({
             help_status:false

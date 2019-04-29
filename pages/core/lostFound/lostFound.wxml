@@ -10,9 +10,9 @@
             ＋
         </navigator>
         <block class="card" wx:for="{{foundList}}" wx:if="{{active.type == 1}}" >
-            <navigator url="../lostFound/detail/detail" class="main-card" bindtap="getDetail">
+            <navigator url="../lostFound/detail/detail" class="main-card" data-id="{{item.id}}" data-type="{{item.type}}" bindtap="getDetail">
                 <view class="main-card-left">
-                    <view class="title" data-id="{{item.id}}" data-type="{{item.type}}">
+                    <view class="title"  >
                         {{item.title}}
                     </view>
                     <view class="time">
@@ -26,9 +26,10 @@
             </navigator>
         </block>
         <block class="card" wx:for="{{lostList}}" wx:if="{{active.type == 2}}" >
-            <navigator url="../lostFound/detail/detail" class="main-card" bindtap="getDetail">
+            <navigator url="../lostFound/detail/detail" class="main-card" 
+            data-id="{{item.id}}" data-type="{{item.type}}" bindtap="getDetail">
                 <view class="main-card-left">
-                    <view class="title" data-id="{{item.id}}" data-type="{{item.type}}">
+                    <view class="title"  >
                         {{item.title}}
                     </view>
                     <view class="time">

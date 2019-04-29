@@ -1,5 +1,26 @@
 <view class="container">
     <block class="card">
+            <view class="main-card">
+                    <view class="main-card-item">
+                        <text class="main-card-item-text1">V1.2.0正式版</text>
+                        <text style="font-size:12pt;color:#D3D3D3;">2019-04-28</text>
+                    </view>
+                    <view class="main-card-item1">
+                        <text class="main-card-item-text2">新增:班车时刻功能</text>
+                    </view>
+                    <view class="main-card-item1">
+                        <text class="main-card-item-text2">新增:校园黄页功能</text>
+                    </view>
+                    <view class="main-card-item1">
+                        <text class="main-card-item-text2">新增:失物招领功能</text>
+                    </view>
+                    <view class="main-card-item1">
+                        <text class="main-card-item-text2">新增:表白墙功能</text>
+                    </view>
+                    <view class="main-card-item1">
+                        <text class="main-card-item-text2">修复:部分BUG</text>
+                    </view>
+                </view>
         <view class="main-card">
             <view class="main-card-item">
                 <text class="main-card-item-text1">V1.1.2正式版</text>

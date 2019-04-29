@@ -18,6 +18,8 @@
     "pages/core/jwgg/jwgg",
     "pages/core/ncyw/ncyw",
     "pages/core/cet/cet",
+    "pages/core/bus/bus",
+    "pages/core/phones/phones",
     "pages/core/lostFound/lostFound",
     "pages/core/lostFound/detail/detail",
     "pages/core/lostFound/post/post",

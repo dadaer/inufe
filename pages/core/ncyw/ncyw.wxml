@@ -9,9 +9,10 @@
 
         <block wx:for="{{list}}">
             <navigator url="../ncyw/detail/detail">
-            <view wx:if="{{item.title}}" class="list-item news" bindtap="getNewsDetail">
+            <view wx:if="{{item.title}}" class="list-item news" 
+            data-src="{{item.src}}" bindtap="getNewsDetail">
                 <view class="list-item-left">
-                    <text class="list-item-title" data-src="{{item.src}}">{{item.title}}</text>
+                    <text class="list-item-title" >{{item.title}}</text>
                     <text class="list-item-time">{{item.date}}</text>
                 </view>
                 <!-- <image class="list-item-icon" src="/images/campus/{{item.type}}.png"></image> -->

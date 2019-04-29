@@ -121,7 +121,7 @@ Page({
       } else {
         console.log("到底了")
       }
-    } else {
+    } else if (this.data.active.type == 2) {
       var lostPageNo = this.data.lostPageNo;
       if (lostPageNo < this.data.lostPages) {
         lostPageNo = lostPageNo + 1
@@ -176,17 +176,21 @@ Page({
   },
 
   getDetail: function (e) {
-    console.log(e.target.dataset.id)
-    app.saveCache("LostFoundId", e.target.dataset.id)
-    app.saveCache("LostFoundType", e.target.dataset.type)
+    console.log(e.currentTarget.dataset.id)
+    // wx.navigateTo({
+    //   url: '/pages/core/lostFound/detail/detail?id=' + e.target.dataset.id,
+    // })
+    app.saveCache("LostFoundId", e.currentTarget.dataset.id)
+    app.saveCache("LostFoundType", e.currentTarget.dataset.type)
   },
 
   changeFilter: function (e) {
     console.log(e.target.dataset.type)
-    this.setData({
+    var that = this;
+    that.setData({
       'active.type': e.target.dataset.type
     })
-    if (this.data.active.type == 1) {
+    if (that.data.active.type == 1) {
       wx.request({
         url: 'https://dadaer.top:8082/lostfoundinfos?type=1&pageNo=1',
         data: {},
@@ -196,6 +200,7 @@ Page({
           // success
           that.setData({
             foundList:res.data.list,
+            foundPages: res.data.pages,
             foundPageNo:1
           })
         },
@@ -206,7 +211,7 @@ Page({
           // complete
         }
       })
-    } else {
+    } else if (that.data.active.type == 2) {
       wx.request({
         url: 'https://dadaer.top:8082/lostfoundinfos?type=2&pageNo=1',
         data: {},
@@ -216,6 +221,7 @@ Page({
           // success
           that.setData({
             lostList:res.data.list,
+            lostPages: res.data.pages,
             lostPageNo:1
           })
         },

@@ -34,6 +34,6 @@ Page({
 
   getNewsDetail:function(e) {
     // console.log(e.target.dataset.src);
-    app.saveCache("src",e.target.dataset.src);
+    app.saveCache("src",e.currentTarget.dataset.src);
   }
 })

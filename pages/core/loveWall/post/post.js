@@ -15,7 +15,22 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    if (!app.cache.stuNum) {
+      wx.showModal({
+        title: '提示',
+        // showCancel: false,
+        content: '需发布信息请先登录',
+        confirmText: '确定',
+        showCancel: false,
+        success(res) {
+          if (res.confirm) {
+            wx.navigateBack({
+              delta: 1, // 回退前 delta(默认为1) 页面
+            })
+          }
+        }
+      })
+    }
   },
 
   /**
@@ -112,8 +127,7 @@ Page({
     }
     wx.showToast({
       title: '上传中',
-      icon: 'loading',
-      duration: 9000
+      icon: 'loading'
     });
     var that = this;
     var time = new Date().format("yyyy-MM-dd hh:mm:ss")
@@ -162,6 +176,7 @@ Page({
                 }
               })
             } else {
+              wx.hideToast();
               wx.showModal({
                 title: '提示',
                 // showCancel: false,
