@@ -55,3 +55,39 @@
     /* font-weight: bold; */
     color: #fff;
 }
+
+.card-item-bd {
+    padding: 20rpx 25rpx 30rpx 0;
+    margin-left: 30rpx;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .fx-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .fx-image {
+    border-radius: 16rpx;
+    height: 360rpx
+  }
+  
+  .fx-item-title {
+    font-size: 15pt;
+    line-height: 200%;
+    color: #777;
+    white-space: nowrap;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  .course-item-left {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    padding-right: 30rpx;
+    overflow: hidden;
+  }

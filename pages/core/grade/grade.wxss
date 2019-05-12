@@ -96,6 +96,7 @@ page{
     align-items: center;
     border-top: 1px solid #eee;
     padding: 25rpx 10rpx 20rpx 5rpx;
+    color:#777;
 }
 
 .cj-info-socre{

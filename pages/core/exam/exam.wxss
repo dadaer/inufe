@@ -48,6 +48,7 @@ page{
     display: flex;
     flex-flow: column nowrap;
     align-items: stretch;
+    color:#777;
 }
 
 .ks-class-item {

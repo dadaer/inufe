@@ -5,41 +5,38 @@ page{
 }
 
 .container {
-    
     padding:60rpx 30rpx;
-    
 }
 
-/* 余额卡片 */
+.tap {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    background-color: #83caba;
+    width: 60%;
+    padding: 20rpx;
+    border-radius: 8rpx;
+    margin: 550rpx auto;
+    color: #f7f7f7;
+}
+
 .xyk-card {
   display: flex;
   flex-direction: column;
   height: 350rpx;
   margin:0 50rpx 60rpx;
-  /* background: #ffcc61; */
   background: -webkit-linear-gradient(bottom left,#80BFFF, #409FFF, #0080FF);
   border-radius: 15rpx;
   box-shadow: 5rpx 5rpx 15rpx #ccc;
 }
+
 .xyk-hd {
   display: flex;
   flex-direction: row;
-  /* justify-content: space-between; */
   font-size: 10pt;
   padding: 25rpx;
 }
-/* .xyk-chip {
-  width: 100rpx;
-  height: 80rpx;
-  border-radius: 10rpx;
-  margin: 40rpx 40rpx 0;
-  background: #e6e8fa;
-} */
-/* .xyk-title {
-  font-size: 30px;
-  text-align: right;
-  margin: 40rpx 40rpx 0;
-} */
+
 .xyk-content {
   flex: 1;
   display: flex;
@@ -47,6 +44,7 @@ page{
   justify-content: space-between;
   margin-left: 80rpx;
 }
+
 .xyk-ye {
   flex: 1;
   display: flex;
@@ -54,22 +52,26 @@ page{
   padding-right: 50rpx;
   color: #777;
 }
+
 .xyk-ye-name {
   font-size: 11pt;
   line-height: 50rpx;
   padding-left: 30rpx;
 }
+
 .xyk-ye-money {
   text-align: center;
   font-size: 10pt;
   margin-right: 10rpx;
 }
+
 .xyk-ye-value {
   font-size: 36pt;
   font-weight: bold;
   line-height: 80rpx;
   padding-right: 25prx;
 }
+
 .xyk-card-more {
     display: flex;
     justify-content: space-between;
@@ -79,13 +81,16 @@ page{
     opacity: .6;
     z-index: 1;
 }
+
 .tblogo {
   height: 80rpx;
   width: 160rpx;
 }
+
 .xyk-ye-time {
     font-size: 9pt;
 }
+
 .xyk-ye-id {
     font-size: 10pt;
 }

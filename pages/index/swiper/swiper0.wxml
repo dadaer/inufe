@@ -1,0 +1,9 @@
+<!--pages/index/swiper/swiper1.wxml-->
+<view class='container'>
+    <view class="content">
+      <view class='header'>
+        <image class='header-image' src='https://dadaer.top:8082/image?imgUrl=/home/i.jpg' 
+        style="width: 100%;" mode="widthFix"></image>
+      </view>
+    </view>
+  </view>

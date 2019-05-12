@@ -1,10 +1,12 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/index/swiper/swiper0",
     "pages/index/swiper/swiper1",
     "pages/index/swiper/swiper2", 
     "pages/index/swiper/swiper3",
     "pages/index/share/share",
+    "pages/index/advice/advice",
     "pages/logs/logs",
     "pages/campus/campus",
     "pages/campus/liblogin/liblogin",
@@ -22,6 +24,7 @@
     "pages/core/phones/phones",
     "pages/core/lostFound/lostFound",
     "pages/core/lostFound/detail/detail",
+    "pages/core/campus-card/campus-card",
     "pages/core/lostFound/post/post",
     "pages/core/loveWall/loveWall",
     "pages/core/loveWall/post/post",
@@ -63,6 +66,9 @@
       "selectedIconPath":"images/mine/mine1.png"
     }
     ]
-  }
+  },
+  "navigateToMiniProgramAppIdList":[
+    "wx1d601120cb68b98f"
+  ]
   
 }

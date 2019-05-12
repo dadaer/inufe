@@ -42,10 +42,10 @@
                             <text class="ks-detail-label">日期</text>
                             <text class="ks-detail-content">{{item.date}}</text>
                         </view>
-                        <!-- <view class="ks-detail-item">
+                        <view class="ks-detail-item">
                             <text class="ks-detail-label">时间</text>
                             <text class="ks-detail-content">{{item.time}}</text>
-                        </view> -->
+                        </view>
                         <view class="ks-detail-item">
                             <text class="ks-detail-label">地点</text>
                             <text class="ks-detail-content">{{item.examPlace}}</text>

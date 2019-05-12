@@ -1,4 +1,4 @@
-// pages/core/campus-card/campus-card.js
+// pages/index/swiper/swiper0.js
 Page({
 
   /**
@@ -12,14 +12,14 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-   
+
   },
 
   /**
@@ -62,16 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-  
-  tap:function () {
-    console.log("...")
-    wx.navigateToMiniProgram({
-      appId: 'wx1d601120cb68b98f',
-      path: 'pages/index/index',
-      success(res) {
-        // 打开成功
-      }
-    })
   }
 })

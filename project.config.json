@@ -36,7 +36,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 23,
+			"current": 25,
 			"list": [
 				{
 					"id": -1,
@@ -187,6 +187,19 @@
 					"name": "lostFound",
 					"pathName": "pages/core/lostFound/lostFound",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "advice",
+					"pathName": "pages/index/advice/advice",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "campus-card",
+					"pathName": "pages/core/campus-card/campus-card",
 					"scene": null
 				}
 			]

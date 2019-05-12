@@ -44,15 +44,8 @@ Page({
           cancelText: '否',
           success(res) {
             if (res.confirm) {
-              wx.clearStorage();
-              wx.request({
-                url: 'https://dadaer.top:8082/management/init',
-                success: function (res) {
-                  app.saveCache("cookie", res.data.extend.cookies)
-                }
-              })
-              wx.navigateTo({
-                url: '/pages/mine/login/login',
+              wx.switchTab({
+                url: '/pages/mine/mine',
               })
             } 
           }

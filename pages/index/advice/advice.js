@@ -1,25 +1,30 @@
-// pages/core/campus-card/campus-card.js
+// pages/index/advice/advice.js
+var app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    list: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    if(app.cache.fx) {
+      this.setData({
+        list:app.cache.fx
+      })
+    }
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-   
+
   },
 
   /**
@@ -62,16 +67,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-  
-  tap:function () {
-    console.log("...")
-    wx.navigateToMiniProgram({
-      appId: 'wx1d601120cb68b98f',
-      path: 'pages/index/index',
-      success(res) {
-        // 打开成功
-      }
-    })
   }
 })

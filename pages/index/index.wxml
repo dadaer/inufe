@@ -1,7 +1,7 @@
 <view class="container">
   <!-- 轮播图 -->
   <view class='swiper'>
-    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <swiper indicator-dots="{{indicatorDots}}" indicator-active-color="#79d0a6" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
       <block wx:for="{{imgUrls}}">
         <swiper-item class="slide-image">
           <navigator url='/pages/index/swiper/{{item.id}}'>
@@ -14,15 +14,35 @@
 
   <!-- <view class="main-core"> -->
   <!--功能滑块-->
-  <scroll-view scroll-x class="scroll-x">
-    <block wx:for="{{core}}" wx:key="id">
+  <!-- <scroll-view scroll-x class="scroll-x">
+    <block wx:for="{{cores}}" wx:key="id">
       <navigator class="main-core-item" url="{{'/pages/core/'+item.id+'/'+item.id}}">
         <image class="core-item-icon" src="/images/core/{{item.id}}.jpg"></image>
         <text class="core-item-name">{{item.name}}</text>
       </navigator>
     </block>
-  </scroll-view>
+  </scroll-view> -->
   <!-- </view> -->
+
+  <swiper class="main-swiper" indicator-dots="true" indicator-active-color="#79d0a6" duration="200">
+    <swiper-item class="main-core" wx:for="{{cores}}"  wx:for-item="core" wx:key="id" >
+      <block wx:for="{{core}}" wx:key="id">
+        <navigator  class="main-core-item" url="{{'/pages/core/'+item.id+'/'+item.id}}">
+          <image class="core-item-icon" src="/images/core/{{item.id}}.jpg"></image>
+          <text class="core-item-name">{{item.name}}</text>
+        </navigator>
+      </block>
+    </swiper-item >
+    </swiper>
+     
+  <!-- 通知 -->
+  <swiper class='swiper-box' autoplay='{{true}}' interval='3000' vertical='{{true}}' circular='{{true}}'>
+      <swiper-item class='item' wx:for='{{card.fx.data}}'>
+        <navigator url="./advice/advice" hover-class="none">
+            {{item.passgeTitle}}  
+        </navigator>
+      </swiper-item>
+    </swiper>
 
 
   <view class="main-card">

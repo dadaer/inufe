@@ -1,8 +1,8 @@
 <view class="free-WaterfallFlow">
-        <navigator class="post" url="../loveWall/post/post">
-            ＋
-        </navigator>
-    <block>
+  <navigator class="post" url="../loveWall/post/post">
+    ＋
+  </navigator>
+  <block>
       <view class="flex-wrap" wx:for="{{list}}" wx:key='{{item.src}}' 
       wx:if="{{item.id%2!=''}}">
         <image mode="widthFix" src="{{'https://dadaer.top:8082/image?imgUrl=' + item.imgUrl}}" data-src="{{item.imgUrl}}" bindtap="previewImage"></image>
@@ -18,4 +18,16 @@
         <view>{{item.postTime}}</view>
       </view>
     </block>
-  </view>
+  <!-- <block wx:for="{{list}}">
+    <view class="card-item-bd">
+      <view class="fx-item">
+        <view class="course-item-left">
+          <view>
+            <image src="{{'https://dadaer.top:8082/image?imgUrl=' + item.imgUrl}}" class="fx-image"></image>
+          </view>
+          <text class="fx-item-title">{{item.content}}</text>
+        </view>
+      </view>
+    </view>
+  </block> -->
+</view>

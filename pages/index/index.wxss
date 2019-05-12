@@ -10,6 +10,7 @@
 
 swiper {
   height: 400rpx;
+  /* height: 320rpx; */
   padding: 20rpx;
   padding-bottom:10rpx;
 }
@@ -21,6 +22,7 @@ swiper {
 
 .slide-image image {
   height: 400rpx;
+  /* height: 320rpx; */
   width: 680rpx;
 }
 
@@ -51,13 +53,16 @@ swiper {
   background: #fff;
   padding: 15rpx 10rpx 0rpx;
   /* margin: 0 30rpx 40rpx; */
-  margin: 0 30rpx 10rpx;
+  margin: 0 30rpx 0rpx;
   overflow: hidden;
   /* height: 85px; */
   height: 170px;
   width: 672rpx;
   /* 滑块时需要加上下面属性 */
   /* white-space: nowrap; */
+} 
+.main-swiper{
+  height: 370rpx;
 }
 
 .main-core {
@@ -68,8 +73,8 @@ swiper {
   border-radius: 10rpx;
   border-bottom: 1rpx solid #e5e5e5;
   box-shadow: 5rpx 5rpx 15rpx #ccc;
-  padding: 15rpx 10rpx 10rpx;
-  margin: 30rpx 30rpx 20rpx;
+  /* padding: 15rpx 10rpx 10rpx; */
+  /* margin: 30rpx 30rpx 20rpx; */
   overflow: hidden;
 }
 
@@ -99,6 +104,30 @@ swiper {
   color:#777;
 }
 
+.advice{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.swiper-box{
+  height: 65rpx;
+  line-height: 65rpx;
+  padding: 0 0 10rpx 60rpx;
+  overflow: hidden;
+  font-size: 30rpx;
+  color: #777;
+  letter-spacing:1.2px;
+  width: 70%;
+  
+}
+.swiper-box .item{
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  border-left:8rpx solid #ccc ;
+  padding-left:22rpx;
+}
+
 .main-card {
   padding-bottom: 50rpx;
 }
@@ -111,7 +140,7 @@ swiper {
   border-bottom: 1rpx solid #e5e5e5;
   border-radius: 10rpx;
   box-shadow: 5rpx 5rpx 15rpx #ccc;
-  margin: 0 30rpx 30rpx;
+  margin: 10rpx 30rpx 30rpx;
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: bottom center;
