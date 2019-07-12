@@ -18,7 +18,7 @@ Page({
 
   onLoad: function () {
     var that = this;
-    var todayWeek = util.todayInfo("2019/2/25").week;
+    var todayWeek = util.todayInfo("2019/7/1").week;
     that.setData({
       currentWeek:todayWeek
     })
@@ -91,7 +91,7 @@ Page({
 
   getTermCourse:function(){
     var that = this;
-    var todayWeek = util.todayInfo("2019/2/25").week;
+    var todayWeek = util.todayInfo("2019/7/1").week;
     var list = [];
     var length = app.cache.course.length;
     for (let i = 0; i < length; i++) {

@@ -7,28 +7,33 @@
     <image class="title" src="/images/mine/title.png"></image>
     <view class="content">
       <view class="hd" style="transform:rotateZ({{angle}}deg);">
-          <image class="logo" src="/images/more/logo.png"></image>
-          <image class="wave" src="/images/mine/wave.png" mode="aspectFill"></image>
-          <image class="wave wave-bg" src="/images/more/wave.png" mode="aspectFill"></image> 
-      </view> 
-      <view class="bd"> 
+        <image class="logo" src="/images/more/logo.png"></image>
+        <image class="wave" src="/images/mine/wave.png" mode="aspectFill"></image>
+        <image class="wave wave-bg" src="/images/more/wave.png" mode="aspectFill"></image>
+      </view>
+      <view class="bd">
         <form class="login-form">
-            <view class="input-group {{userName_focus ? 'active' : ''}}">
-                <text class="input-label">姓名</text>
-                <input  cursor-spacing="30" id="userName"  placeholder="请输入姓名" bindinput="userNameInput" bindfocus="inputFocus" bindblur="inputBlur" />
-              </view>
-          <view class="input-group {{userid_focus ? 'active' : ''}}">
-            <text class="input-label">帐号</text>
-            <input  cursor-spacing="30" id="userid"  placeholder="请输入学号" bindinput="useridInput" bindfocus="inputFocus" bindblur="inputBlur" />
+          <view  wx:if="{{!loged}}" class="input-group {{userName_focus ? 'active' : ''}}" >
+            <text class="input-label">姓名</text>
+            <input cursor-spacing="30" id="userName" placeholder="请输入姓名" bindinput="userNameInput"
+              bindfocus="inputFocus" bindblur="inputBlur" />
           </view>
-          <view class="input-group {{passwd_focus ? 'active' : ''}}">
+          <view wx:if="{{!loged}}" class="input-group {{userid_focus ? 'active' : ''}}">
+            <text class="input-label">帐号</text>
+            <input cursor-spacing="30" id="userid" placeholder="请输入学号" bindinput="useridInput" bindfocus="inputFocus"
+              bindblur="inputBlur" />
+          </view>
+          <view wx:if="{{!loged}}" class="input-group {{passwd_focus ? 'active' : ''}}">
             <text class="input-label">密码</text>
-            <input password="true" cursor-spacing="30" id="passwd" placeholder="请输入正方教务系统密码" bindinput="passwdInput" bindfocus="inputFocus" bindblur="inputBlur" />
+            <input password="true" cursor-spacing="30" id="passwd" placeholder="请输入正方教务系统密码" bindinput="passwdInput"
+              bindfocus="inputFocus" bindblur="inputBlur" />
           </view>
           <view class="input-group {{checkCode_focus ? 'active' : ''}}">
             <text class="input-label">验证码</text>
-            <input  cursor-spacing="30" id="checkCode" maxlength="4" placeholder="请输入验证码" bindinput="checkcodeInput" bindfocus="inputFocus" bindblur="inputBlur" />
-            <image src="{{CheckCodePath}}" style='width:70px;height:25px' class='checkcode' bindtap="getCheckCodeCookie"></image>
+            <input cursor-spacing="30" id="checkCode" maxlength="4" placeholder="请输入验证码" bindinput="checkcodeInput"
+              bindfocus="inputFocus" bindblur="inputBlur" />
+            <image src="{{CheckCodePath}}" style='width:70px;height:25px' class='checkcode'
+              bindtap="getCheckCodeCookie"></image>
           </view>
           <view class="help" id="help" wx:if="{{help_status}}" bindtap="tapHelp">
             <view class="box">
@@ -41,7 +46,7 @@
                 <view class="help-q">
                   <!-- <text>由于技术上的瓶颈，密码或验证码一次输入错误后，验证码无法自动刷新，导致之后输入的验证码全部错误，遇到此情况，请点击左上角返回按钮，到"我的"页面点击切换绑定重新登录即可，若仍遇到此类情况，请避开登录高峰期再尝试登录，开发小伙伴会尽力解决此问题</text> -->
                   <text>
-                      遇到验证码不显示的情况,点击验证码输入框最右侧即可
+                    遇到验证码不显示的情况,点击验证码输入框最右侧即可
                   </text>
                 </view>
               </view>
@@ -52,7 +57,7 @@
             <text>获取验证码</text>
         </view> -->
         <view class="confirm-btn" bindtap="bind">
-            <text>确认登录</text>
+          <text>确认登录</text>
         </view>
       </view>
     </view>

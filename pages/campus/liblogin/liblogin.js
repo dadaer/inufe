@@ -2,11 +2,17 @@ var app = getApp();
 Page({
     data: {
         help_status: true,
-        CheckCodePath: ''
+        CheckCodePath: '',
+        loged:false
     },
 
     onShow: function () {
         this.getCheckCode();
+        if (app.cache.libPassword) {
+            this.setData({
+                loged:true
+            })
+        }
     },
 
     bind: function () {
@@ -19,8 +25,8 @@ Page({
             method: 'GET',
             url: "https://dadaer.top:8082/lib/number",
             data: {
-                stuNum: _this.data.stuNum,
-                password: _this.data.password,
+                stuNum: _this.data.stuNum || app.cache.stuNum,
+                password: _this.data.password || app.cache.libPassword,
                 captcha: _this.data.checkCode
             },
             header: {
@@ -33,7 +39,7 @@ Page({
                         delta: 1, // 回退前 delta(默认为1) 页面
                     })
                     // app.saveCache("stuNum",_this.data.stuNum);
-                    app.saveCache("password", _this.data.password);
+                    app.saveCache("libPassword", _this.data.password);
                     app.saveCache("zdkj", res.data.zdkj);
                     app.saveCache("zdyy", res.data.zdyy);
                     app.saveCache("zdwt", res.data.zdwt);

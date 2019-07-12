@@ -20,12 +20,12 @@
             </view>
             <view class="bd">
                 <form class="login-form">
-                    <view class="input-group {{userid_focus ? 'active' : ''}}">
+                    <view wx:if="{{!loged}}" class="input-group {{userid_focus ? 'active' : ''}}">
                         <text class="input-label">学号</text>
                         <input cursor-spacing="30" id="userid" placeholder="请输入学号" bindinput="useridInput" bindfocus="inputFocus"
                             bindblur="inputBlur" />
                     </view>
-                    <view class="input-group {{passwd_focus ? 'active' : ''}}">
+                    <view wx:if="{{!loged}}" class="input-group {{passwd_focus ? 'active' : ''}}">
                         <text class="input-label">密码</text>
                         <input password="true" cursor-spacing="30" id="passwd" placeholder="请输入信息门户密码或图书系统密码" bindinput="passwdInput"
                             bindfocus="inputFocus" bindblur="inputBlur" />

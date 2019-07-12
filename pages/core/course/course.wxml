@@ -20,6 +20,7 @@
       <view data-id="15" bindtap="changeWeek" class="weeks-item {{choosedWeek == 15 ? 'current-week':''}}">15</view>
       <view data-id="16" bindtap="changeWeek" class="weeks-item {{choosedWeek == 16 ? 'current-week':''}}">16</view>
       <view data-id="17" bindtap="changeWeek" class="weeks-item {{choosedWeek == 17 ? 'current-week':''}}">17</view>
+      <view data-id="18" bindtap="changeWeek" class="weeks-item {{choosedWeek == 18 ? 'current-week':''}}">18</view>
   </view>
 
   <view class="top">

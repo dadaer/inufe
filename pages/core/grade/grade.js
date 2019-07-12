@@ -4,7 +4,7 @@ Page({
     id:'2120172170',
     name:'dadaer',
     year:'2018-2019',
-    term:'1',
+    term:'2',
     cjInfo: {
       data:[]
   }

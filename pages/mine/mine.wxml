@@ -56,9 +56,7 @@
 </view>
 
   <navigator url="../mine/login/login" class="login-btn" bindtap = "changeUser">
-    <text>切换绑定</text>
-    
+    <text>数据刷新</text>
   </navigator>
-
 
 </view>

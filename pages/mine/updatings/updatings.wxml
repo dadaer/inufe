@@ -1,5 +1,17 @@
 <view class="container">
     <block class="card">
+            <view class="main-card">
+                    <view class="main-card-item">
+                        <text class="main-card-item-text1">V1.4.0正式版</text>
+                        <text style="font-size:12pt;color:#D3D3D3;">2019-07-12</text>
+                    </view>
+                    <view class="main-card-item1">
+                        <text class="main-card-item-text2">优化:数据获取逻辑</text>
+                    </view>
+                    <view class="main-card-item1">
+                            <text class="main-card-item-text2">优化:数据刷新逻辑</text>
+                    </view>
+            </view>
         <view class="main-card">
             <view class="main-card-item">
                 <text class="main-card-item-text1">V1.3.0正式版</text>
@@ -9,13 +21,19 @@
                 <text class="main-card-item-text2">新增:跳蚤市场跳转</text>
             </view>
             <view class="main-card-item1">
-                    <text class="main-card-item-text2">新增:首页通知模块</text>
+                <text class="main-card-item-text2">新增:首页通知模块</text>
             </view>
             <view class="main-card-item1">
-                    <text class="main-card-item-text2">新增:功能滑块</text>
+                <text class="main-card-item-text2">新增:功能滑块</text>
             </view>
             <view class="main-card-item1">
-                    <text class="main-card-item-text2">修复:部分BUG</text>
+                <text class="main-card-item-text2">优化:重新登录逻辑</text>
+            </view>
+            <view class="main-card-item1">
+                <text class="main-card-item-text2">优化:失物招领、表白墙发布逻辑</text>
+            </view>
+            <view class="main-card-item1">
+                <text class="main-card-item-text2">修复:部分BUG</text>
             </view>
         </view>
         <view class="main-card">
@@ -57,22 +75,19 @@
                     <text class="main-card-item-text2">新增:志愿服务功能</text>
             </view> -->
             <view class="main-card-item1">
+                <text class="main-card-item-text2">优化:部分页面语言表达欠缺问题</text>
+            </view>
+            <view class="main-card-item1">
                 <text class="main-card-item-text2">修改:新闻详情页的提醒</text>
             </view>
             <view class="main-card-item1">
                 <text class="main-card-item-text2">修复:长时间后图书馆无法绑定问题</text>
-            </view>
-            <view class="main-card-item1">
-                <text class="main-card-item-text2">优化:部分页面语言表达欠缺问题</text>
             </view>
         </view>
         <view class="main-card">
             <view class="main-card-item">
                 <text class="main-card-item-text1">V1.1.0正式版</text>
                 <text style="font-size:12pt;color:#D3D3D3;">2019-03-27</text>
-            </view>
-            <view class="main-card-item1">
-                <text class="main-card-item-text2">修改:轮播图数量,'我的'页面部分图标</text>
             </view>
             <view class="main-card-item1">
                 <text class="main-card-item-text2">优化:轮播图显示,解决轮播图显示时间过久问题</text>
@@ -83,6 +98,9 @@
             <view class="main-card-item1">
                 <text class="main-card-item-text2">优化:针对图书馆数据刷新需求新增重新登录按钮</text>
             </view>
+            <view class="main-card-item1">
+                <text class="main-card-item-text2">修改:轮播图数量,'我的'页面部分图标</text>
+            </view>
         </view>
         <view class="main-card">
             <view class="main-card-item">
@@ -90,7 +108,7 @@
                 <text style="font-size:12pt;color:#D3D3D3;">2019-03-24</text>
             </view>
             <view class="main-card-item1">
-                <text class="main-card-item-text2">后台解决终极BUG,择良日发布i南财小程序正式版</text>
+                <text class="main-card-item-text2">后台解决终极BUG,择良日发布"i南财"小程序正式版</text>
             </view>
         </view>
         <view class="main-card">
@@ -99,13 +117,13 @@
                 <text style="font-size:12pt;color:#D3D3D3;">2019-03-21</text>
             </view>
             <view class="main-card-item1">
-                <text class="main-card-item-text2">修复:针对图书馆官网修改登录逻辑做出相应调整</text>
-            </view>
-            <view class="main-card-item1">
                 <text class="main-card-item-text2">优化:为解决后台不可捕捉的BUG,主登录页面需手动填写姓名</text>
             </view>
             <view class="main-card-item1">
                 <text class="main-card-item-text2">优化:主登录页面和图书馆登录页面实现手动刷新验证码和登录失败自动刷新验证码</text>
+            </view>
+            <view class="main-card-item1">
+                <text class="main-card-item-text2">修复:针对图书馆官网修改登录逻辑做出相应调整</text>
             </view>
         </view>
         <view class="main-card">
@@ -135,16 +153,16 @@
                 <text class="main-card-item-text2">新增:课表查询页面点击单节课表可查看课程详细信息</text>
             </view>
             <view class="main-card-item1">
-                <text class="main-card-item-text2">修复:历史借阅不断刷新BUG</text>
-            </view>
-            <view class="main-card-item1">
-                <text class="main-card-item-text2">修复:部分用户课表无法显示或信息错误BUG</text>
-            </view>
-            <view class="main-card-item1">
                 <text class="main-card-item-text2">优化:课表缓存逻辑</text>
             </view>
             <view class="main-card-item1">
                 <text class="main-card-item-text2">优化:轮播图内图片高度实现自适应</text>
+            </view>
+            <view class="main-card-item1">
+                <text class="main-card-item-text2">修复:历史借阅不断刷新BUG</text>
+            </view>
+            <view class="main-card-item1">
+                <text class="main-card-item-text2">修复:部分用户课表无法显示或信息错误BUG</text>
             </view>
         </view>
         <view class="main-card">
@@ -165,6 +183,5 @@
                 <text class="main-card-item-text2">开启内测</text>
             </view>
         </view>
-
     </block>
 </view>

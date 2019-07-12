@@ -3,7 +3,8 @@ var app = getApp();
 Page({
   data: {
       ks:{
-      ksName:'',},
+      ksName:'',
+      },
       id:'2120172170',
       name:'姜大朗',
       list:[]
